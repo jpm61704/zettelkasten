@@ -1,0 +1,11 @@
+created: 20200813165424742
+creator: Jack
+list: AutomatedTheoremProvingReferences CodeReuseReferences ComponentBasedSynthesisReferences ExampleBasedSynthesisReferences IntuitionisticLogicReferences ProgramSearchReferences TheoreticalResultsInSynthesis
+modified: 20200909142628671
+modifier: Jack
+tags: TheNetwork
+title: TheNetworkCollections
+tmap.id: 7f24a71c-f817-4529-a925-0e632f6f4cc4
+type: text/vnd.tiddlywiki
+
+<<list-tagged-draggable tag:"TheNetworkCollections" itemTemplate:"CollectionLinkTemplate">>

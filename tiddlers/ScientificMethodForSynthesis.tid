@@ -1,0 +1,12 @@
+created: 20200309165229288
+modified: 20200804223822593
+tags: 
+title: ScientificMethodForSynthesis
+tmap.id: f96f285e-4dda-4be9-b9ea-289a8ee20b76
+type: text/vnd.tiddlywiki
+
+We can imagine a scientific-methods style of ProgramSynthesis by posing hypothesis over the input and output data. The rough algorithm for this is:
+
+# Select a property which is applicable to the types involved in the data
+# Test for the property within the data
+# After some of the properties have been collected, search for a function which agrees with the properties

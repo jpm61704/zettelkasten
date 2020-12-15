@@ -1,0 +1,20 @@
+bibtex-author: Guo, Zheng and James, Michael and Justo, David and Zhou, Jiaxiao and Wang, Ziteng and Jhala, Ranjit and Polikarpova, Nadia
+bibtex-entry-type: article
+bibtex-journal: Proceedings of the ACM on Programming Languages
+bibtex-number: POPL
+bibtex-pages: 1--28
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: Program synthesis by type-guided abstraction refinement
+bibtex-volume: 4
+bibtex-year: 2019
+collections: [[ComponentBasedSynthesisReferences]]
+created: 20200813152501178
+creator: Jack
+document: https://drive.google.com/file/d/1o33o2tiUuw6jFR4lwE8zBn3T82xuYq4q/view?usp=sharing
+modified: 20200820153211688
+modifier: Jack
+title: guo2019program
+tmap.id: 71c957c7-454d-438f-9d1c-da4f2643ad91
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}

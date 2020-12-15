@@ -1,0 +1,25 @@
+created: 20201011001257486
+creator: Jack
+modified: 20201011004845396
+modifier: Jack
+tags: 
+title: StrictlyPositiveTypes
+tmap.id: 272a24e7-f59d-4736-8e80-ee7528af5ebc
+type: text/vnd.tiddlywiki
+
+A strictly positive type is an inductive datatype $$D$$ where all the constructors //do not// contain any references to $$D$$ to the left of an arrow. That is, the constructors cannot have any functions which have $$D$$ as an argument. For instance, the following datatype is not strictly positive:
+
+$$
+\textbf{data } D : \textbf{Set } \text{where}\\
+\quad d : (\underbrace{D}_{!!!} \rightarrow A) \rightarrow D
+$$
+
+The reason we don't allow for these definitions is that they permit the encoding of infinite loops into the type system which gives rise to [[a paradox|CurrysParadox]]. This formalism naturally extends into dependently typed systems via [[StrictlyPositiveFamilies]].
+
+The grammar for defining a strictly positive type(from [[morris2007constructing]]) is:
+
+$$
+\tau = X \mid 0 \mid 1 \mid \tau + \tau \mid \tau \times \tau \mid K \rightarrow \tau \mid \mu X.\tau\\ 
+$$
+
+where $$X$$ ranges over type variables, $$0$$ and $$1$$ are the empty and unit types, $$+$$ represents sum types, $$\times$$ represents product types. $$K$$ is a constant type, that is, a strictly positive type containing no free variables(and this references to a fixed point). Lastly, $$\mu$$ is the leased fixed point. This formalism is exactly the types we are allowed to differentiate over to achieve a [[one hole context|OneHoleContexts]].

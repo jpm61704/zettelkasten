@@ -1,0 +1,21 @@
+created: 20200918235717732
+creator: Jack
+modified: 20200919011157563
+modifier: Jack
+title: OneHoleContexts
+tmap.id: 9f881878-08df-4223-901c-53049c245e4c
+type: text/vnd.tiddlywiki
+
+From [[mcbride2001derivative]]. 
+
+Also see [[RegularTypes]] and [[DerivativesOfDatatypes]].
+
+The idea of one hole contexts is very similar to that of a [[zipper|Zippers]], except that where a zipper zips through a data structure, the one-hole context represents the removal of some piece of the data structure. It is the structure but with a hole somewhere. This hole could be any part of the datatype. It could be a polymorphic term or some deeply nested subterm. The type of one-hole-context is determined by [[differentiating the type|DerivativesOfDatatypes]].
+
+One such example on trees is:
+
+[img[OneHoleContexts.png]]
+
+In this example, the idea is that the context can reconstruct the tree at any time, while allowing for the sub-tree in focus to be edited immediately. This construction also allows for data to be "missing". The context really just "forgets" about the focus, allowing it to be swapped out, or forgotten entirely. Typically this would not be a problem with trees because a dead-end or //unfinished// subtree could just be assigned as a lead. But this method works for data types that don't contain some notion of inert case. 
+
+The big advantage of this construction is that it is able to represent unfinished data structures. In the event that a structure is missing data, or potentially needs runtime information, this can be used as an intermediate for the structure in the meantime. 

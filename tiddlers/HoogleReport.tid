@@ -1,0 +1,14 @@
+created: 20200309165632628
+modified: 20200804223819794
+tags: Reference ProgramSearch
+title: HoogleReport
+tmap.id: 1f901f05-5802-4a13-bf71-e9433a83eecd
+type: text/vnd.tiddlywiki
+
+Source: [[Monad.Reader Issue 12: Summer of Code Special|https://drive.google.com/open?id=1IcFp0EzIqgazd10JoZn761sGjFqWM4E2]]
+
+Takeaways:
+
+* Hoogle was build over four complete rewrites of the source. Over time it become better structured and added more features
+* The organization of the code as a library as opposed to a program was essential in scaling the tool
+* Use a database as soon as possible in order to speed up search

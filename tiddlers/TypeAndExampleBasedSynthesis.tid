@@ -1,0 +1,22 @@
+created: 20200401234508688
+modified: 20200804223824088
+tags: 
+title: TypeAndExampleBasedSynthesis
+tmap.id: 5b903626-f964-4817-b5a4-54a0ceabb008
+type: text/vnd.tiddlywiki
+
+Type-and-Example Based Synthesis(a la Osera) can be encoded as a [[decidable synthesis function|SynthesisIsDecidability]] via the following conversion. Given a function type for the synthesis goal $$f\ :\ A \rightarrow B$$ and a set of input-output examples $$\text{exs} : \text{List}( A \times B)$$ can be formulated as the dependent-sum:
+
+$$
+\Sigma[ f : A \rightarrow B ] (f\ a_1 \equiv b_1) \times (f\ a_2 \equiv b_2) \times ...
+$$
+
+where $$a_i$$ and $$b_i$$ are the input/output examples taken from $$\text{exs}$$.
+
+! Naive Synthesis
+
+A naive form of these synthesis follows a general procedure for synthesizing products. This is the process of synthesizing each sub-component, starting with the independent term $$f$$. Then we must synthesize the proofs of the examples.
+
+! Osera-Style Synthesis
+
+A less naive form of synthesis(in the style of Osera) would propagate the examples from $$\text{exs}$$ while the function $$f$$ is being synthesized. This could help guide the synthesis of $$f$$. [[How this fits into the types-first view is still an open problem|EmbeddedOseraStyleSynthesis]].

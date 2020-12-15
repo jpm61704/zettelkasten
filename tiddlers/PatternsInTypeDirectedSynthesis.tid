@@ -1,0 +1,18 @@
+created: 20200809012913716
+creator: Jack
+modified: 20200809013317146
+modifier: Jack
+tags: 
+title: PatternsInTypeDirectedSynthesis
+tmap.id: 24c81be2-c0e6-46a9-ae2a-dc542626a009
+type: text/vnd.tiddlywiki
+
+An observation made while reading [[albarghouthi2013recursive]].
+
+Most papers in type directed synthesis first give rules for well-formed programs that include the propagation or satisfaction of some set of properties. These are usually highly non-deterministic. The second step is to yield an algorithm through a set of heuristics that determinize the rules. This seems like a general framework for looking at synthesis and could be a good set of dimensions to analyze this area. Specifically the dimensions are:
+
+# The generation of well-formed/typed programs
+# An algorithm to determinize the rules 
+# Heuristics to speed up the process
+
+Dimensions 2 and 3 are not entirely orthogonal but there is a slightly different concern there. This deserves more thought.

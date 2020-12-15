@@ -1,0 +1,42 @@
+created: 20200909174710322
+creator: Jack
+modified: 20200918235609695
+modifier: Jack
+title: DecisionProceduresAndDivva
+tmap.id: 1e2648eb-534f-421b-b293-ab6f45d982e1
+type: text/vnd.tiddlywiki
+
+//Related to// [[OneHoleContexts]].
+
+In [[tsai2015synthesizing]], the essence of the verification strategy is to use a partial proof of correctness, generated statically, to short-circuit a complete dynamic-check, whenever the sub-part of the check has been proven statically. 
+
+This can be looked at as an extension of the standard definition of a decidable property in type theory:
+
+$$
+\text{data Dec } (P : \text{Set} ) : \text{Set where}\\
+\begin{array}{l}
+\text{yes} : P \rightarrow \text{Dec } P\\
+\text{no} : \neg P \rightarrow \text{Dec } P
+\end{array}
+$$
+
+The extension is the addition of a constructor to stand-in for a partial proof, which contains some term that must be computed later. This could be something such as input-data or a heap provided at run-time. We call this type $$\text{PDec}$$.
+
+$$
+\text{data PDec } (P : \text{Set} ) : \text{Set} \rightarrow \text{Set where}\\
+\begin{array}{ll}
+\text{dec} &: \text{Dec }P \rightarrow \text{PDec } P\\
+\text{partial} &: \forall (A : \text{Set})\\ &\rightarrow(A \rightarrow \text{Dec } P) \\
+&\rightarrow \text{PDec } P\ A
+\end{array}
+$$
+
+The constructors for the type of partially decidable properties are: 1. $$\text{dec}$$ - which says that all decidable properties are partially decidable and 2. $$\text{partial}$$ - describes decision procedures that can compute the proof as long as it is supplied with additional information of type $$A$$. This is represented by a function of type $$A \rightarrow \text{Dec } P)$$which says that $$P$$ is decidable when provided with a term of type $$A$$.
+
+Note that this data type encodes the notion of incomplete proofs and does not make any unnecessary assumptions about the types we are working over. All that is needed is a property that can be decided when given more precise information. 
+
+$$
+\circ\circ\circ
+$$
+
+Now an example, imagine 

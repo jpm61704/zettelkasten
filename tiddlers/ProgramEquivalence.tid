@@ -1,0 +1,29 @@
+created: 20200316233822599
+modified: 20200804223821586
+tags: ProgramSearch
+title: ProgramEquivalence
+tmap.id: bdfc3fd1-098b-4fc4-a090-84fe49cf4484
+type: text/vnd.tiddlywiki
+
+The first key piece of [[SearchForDependentTypes]] is going to be some notion of equivalence for types so that we can search through libraries for matches to a query. It is standard, as pointed out in the [[literature|IsomorphismOfTypes]], to use type isomorphism for this sort of task. The rough part of this fact is that isomorphism of types is a very difficult calculation to perform. In its most general case it is undecidable. 
+
+Because of this we should adopt Decidable Type-Equivalences as a parameter to our search techniques so that a specific sort of equivalence can be used for each application. In reality we will develop an equivalence that is as powerful as possible and update it as we go. 
+
+Program equivalence is also very interesting because the specification we give for search will always be able to be encoded as a type. This makes the notion of type isomorphism even more powerful here. For instance, given the search specification:
+
+
+```
+q : Nat -> Nat -> Nat
+examples: 
+q 1 2 = 3
+q 2 2 = 4
+     etc.
+```
+
+We can encode the specification of this as a single $$\Sigma$$-type.
+
+$$spec : \Sigma_{q : \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N}} [(q\ 1\ 2\ \equiv 3) \times (q\ 2\ 2 \equiv 4) \times ...]$$
+
+If we wish to search for this specification we will also need to assume that most of the functions will not already come //pre-packaged// with the proofs for these specific examples. Thus we will need to construct the $$\Sigma$$-term ourselves during the search. 
+
+This ironically, could be solved using a [[compund-search synthesis|CompundSearchSynthesis]] as it is just a single hole synthesis of the components of this dependent pair.

@@ -1,0 +1,15 @@
+created: 20200420043531560
+modified: 20200804223817623
+tags: 
+title: ComponentBasedSynthesis
+tmap.id: e95eea04-6f33-44e4-9445-74c61d4592f3
+type: text/vnd.tiddlywiki
+
+Also see [[ComponentBasedSynthesisLiterature]].
+
+My general approach towards the synthesis problem probably would be classed under component-based synthesis. These methods have influenced my own ideas by treating the already-defined libraries of components as an important piece to the synthesis process. In any model of synthesis that is going to scale, it is inevitable that abstractions will need to be introduced and managed. The only way to do this is to have a synthesizer interact with a module system in a robust way. I'd like to think that the context of synthesis //is// the primary tool for the synthesis process. //But how can I show this?//
+
+An important fact to remember in the components-view of synthesis is that any syntactic object in MLTT can be represented as a function(i.e. a component) in a library. So components should really be a fundamental in this respect. 
+
+* The [[CompoundSearchSynthesis]] methods I've thought about could roughly fall into this category.
+* [[ProgramSearch]] could be used as a foundation for using components during synthesis.

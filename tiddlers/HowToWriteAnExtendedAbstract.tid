@@ -1,0 +1,25 @@
+created: 20200511135804820
+modified: 20200804223820009
+tags: Writing
+title: HowToWriteAnExtendedAbstract
+tmap.id: f0f8401d-e3c8-4654-8e0c-4a088741b050
+type: text/vnd.tiddlywiki
+
+//Based on reading - //<<ref eremondiimproving>>// and //<<ref  paykin2016choose >> // and // <<ref wegman1986s>>.
+
+Use the outline:
+
+# Introduction
+# Problem Setup and Example
+## Subproblem 1
+## Subproblem 2
+## etc.
+# Theoretical Setup
+# Solution
+## Method 1
+## Method 2
+## etc.
+# Implementation
+# Extensions
+
+Be sure to include a flag indicating what section is still a work-in-progress.

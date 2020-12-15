@@ -1,0 +1,16 @@
+created: 20201027151518545
+creator: Jack
+modified: 20201027152548802
+modifier: Jack
+title: OnEvaluations
+tmap.id: 164068a7-b637-43fc-95ba-573cf24b5f44
+type: text/vnd.tiddlywiki
+
+
+<<<
+My experience learning about user research led me to revisit something that I had previously thought a lot about: how should we be evaluating programming languages research papers? While a paper’s Introduction is what gets reviewers interested in a paper in the first place, the evaluation section gives a champion reviewer the necessary ammunition to go to battle at the Program Committee meeting. Because of this power, what shows up in the evaluation section determines what kind of work gets done in entire fields.
+
+(//From //[[What’s the Role of Developer Experience in Programming Languages Research?|https://blog.sigplan.org/2020/10/27/whats-the-role-of-developer-experience-in-programming-languages-research/]])
+<<<
+
+I have often been fairly underwhelmed by the evaluation sections I read in PL papers. I had a fairly long discussion about it with Evan this last Friday and today I came across this paragraph explaining how to think about these sections. This will be helpful as I try and learn how to write one of these sections in the near future.

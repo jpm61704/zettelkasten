@@ -1,0 +1,11 @@
+author: JeremyRuston
+core-version: >=5.0.0
+created: 20200309164641598
+dependents: 
+description: KaTeX: mathematical typography
+list: readme usage
+modified: 20200804223816470
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/katex
+type: application/json
+version: 5.1.19

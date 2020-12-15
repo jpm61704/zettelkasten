@@ -1,0 +1,8 @@
+created: 20200313231215987
+modified: 20200804223820801
+tags: <META>ResearchQuestion
+title: MonadicRewards
+tmap.id: e3a06997-d969-40e1-a8e9-0c04b0e312fe
+type: text/vnd.tiddlywiki
+
+Should there be a monad wrapping the output of a reward function in FRL? See [[MonadicFRL]]

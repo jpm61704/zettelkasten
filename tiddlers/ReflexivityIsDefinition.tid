@@ -1,0 +1,13 @@
+created: 20200407222724400
+modified: 20200804223822240
+title: ReflexivityIsDefinition
+tmap.id: f0ebfa16-97f2-4111-af21-5f77d31a7779
+type: text/vnd.tiddlywiki
+
+It was remarked in [[Setoids in Type Theory|"SetoidsInTypeTheory"]] that:
+
+<<<
+The defined elements of a [[partial setoid|Setoids]] $$A$$ are those expressions $$x : \textsf{el}_p\ A$$ such that $$x =_A x$$. They form the domain of the partial setoid.
+<<<
+
+This implies that the elements of the carrier of the setoid that don't have proofs of reflexivity are undefined. This was a big realization because it gives a formalization to defined vs undefined terms in a type theory. Partial Setoids/Partial Equivalence Relations would this encode both the space of defined elements of a type as well as the //potential// elements of a type. This seems like it could have profound impacts on [[program search|SearchForDependentTypes]] and [[synthesis|Synthesis]].

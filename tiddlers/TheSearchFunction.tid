@@ -1,0 +1,16 @@
+created: 20200319170723793
+modified: 20200804223823802
+tags: ProgramSearch
+title: TheSearchFunction
+tmap.id: 5bc482ac-6083-42b9-85b7-ce036aa31682
+type: text/vnd.tiddlywiki
+
+The function/data structure for [[program search|SearchForDependentTypes]] should take several things as parameters:
+
+# a calculus of types (the type of Types in the formal system)
+# a decidable equality over those types
+# some kind of structure containing the search candidates
+
+The structure contain the candidates should be abstract since the ideal implementation-level structure could make performance improvements and take the form of a list/graph/database etc. This decision should be put off and not worried about at a theoretical level.
+
+The decidable equality //could// also include the notion of examples and other properties by encoding the property satisfaction as a type to be matched against. This is a ''much'' more difficult problem though as it must reason about equality over dependent types in a more whole way. It may also be better to have a notion of [[consistency|SpecificationConsistency]] stand in place of the decidable equality, this would impose a ranking to the solutions.

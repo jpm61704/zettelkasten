@@ -1,0 +1,17 @@
+created: 20200421025824826
+creator: Jack
+modified: 20200813203556688
+modifier: Jack
+tags: Template
+title: RefTemplateOld
+tmap.id: c525d03f-bfbc-4c5a-9076-bc80f49c6834
+type: text/vnd.tiddlywiki
+
+! {{!!bibtex-title}}
+; Author
+: {{!!bibtex-author}}
+; Journal
+: {{!!bibtex-number}} {{!!bibtex-year}}
+; Link
+: <a href={{!!document}} target="_blank" rel="noopener noreferrer">PDF</a>
+!! Notes

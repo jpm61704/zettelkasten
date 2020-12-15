@@ -1,0 +1,22 @@
+bibtex-author: Ferrari, Mauro and Fiorentini, Camillo and Fiorino, Guido
+bibtex-booktitle: International Conference on Logic for Programming Artificial Intelligence and Reasoning
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 294--301
+bibtex-title: fCube: An efficient prover for intuitionistic propositional logic
+bibtex-year: 2010
+collections: [[AutomatedTheoremProvingReferences]] [[IntuitionisticLogicReferences]]
+created: 20200811215025665
+creator: Jack
+document: https://drive.google.com/file/d/1vgwmV5HXYfgIE1WCcUj1SG3M8G4OXRZF/view?usp=sharing
+modified: 20200813203230029
+modifier: Jack
+title: ferrari2010fcube
+tmap.id: a8886d05-8355-456a-9795-9e58ec3aee43
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Compared to [[Imogen]] with the aim of being faster
+
+In the paper, the authors present a theorem prover for intuitionistic logic using tableau methods that aims to outperform other top-of-the-line provers([[Imogen]]). This is done only for propositional logic and not for a type theory, so there are no proof terms generated explicitly, but it could still provide some intuition for exploring term-based strategies as well.

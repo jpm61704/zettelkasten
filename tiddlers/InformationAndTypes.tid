@@ -1,0 +1,17 @@
+created: 20200325010657055
+modified: 20200804223820151
+tags: TypeTheory InformationTheory
+title: InformationAndTypes
+tmap.id: 9b52d2db-9f03-49a6-abb0-ba959c4f4b08
+type: text/vnd.tiddlywiki
+
+//What is the relationship between terms, types, abstraction, computation, and information?//
+
+Measures of information seem to be a potentially useful frame to view the adequacy of abstractions in programming. Typically we like an abstraction when it provides more information in less space than its concretizations. But this is only preferred when there is so much concrete information in the first place. 
+
+For example, If I view that the last two people to enter the room are female, I could generalize this to //all of the people I have observed entering the room are female//. But this statement isn't much preferable to //person 1 to enter the room was female and person 2 to enter the room was female//.  However, If I made 10 observations and they were all female, then it would make more sense to introduce the generalization. I would guess that this could stem from two possible sources:
+
+# The amount of space it takes to encode the generalization must be less than the concrete observations
+# For humans, we are somehow limited to remembering between 5 and 9 things at any point. After about 5 observations show a pattern I would begin to think about making a generalization. So this could prove to be a useful heuristic. 
+
+Information Theory would be an interesting way to look at when to make an abstraction. This could be useful for [[program synthesis|Synthesis]]. Measures of information could also be used to guide [[program search|SearchForDependentTypes]]

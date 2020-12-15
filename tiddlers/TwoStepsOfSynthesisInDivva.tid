@@ -1,0 +1,12 @@
+created: 20201011005724412
+creator: Jack
+modified: 20201011010132142
+modifier: Jack
+title: TwoStepsOfSynthesisInDivva
+tmap.id: 12b60418-98e2-48b7-86b7-45ffaf4419a3
+type: text/vnd.tiddlywiki
+
+In [[tsai2015synthesizing]], there are two steps to synthesizing the short circuiting checkers(SCCs).
+
+# The call(function call) to the checker must be synthesized and replace the less precise assertion that we are working on
+# The SCC function itself(function definition) is then synthesized by asserting the dynamic checks that need to occur after we have removed all of the statically verified cases.

@@ -1,0 +1,26 @@
+created: 20200401221626401
+modified: 20200804223823374
+tags: <META>Needs-Editting
+title: SynthesisIsDecidability
+tmap.id: d8e17fb5-7dd1-4f9d-af04-67aea3846b53
+type: text/vnd.tiddlywiki
+
+Given a proposition/property P, in some formal system, P is decidable if it has some function that decides whether or not the proposition is true. This is encoded in a type theory as the following type:
+
+```
+data Dec (A : Set) : Set where
+  yes :   A → Dec A
+  no  : ¬ A → Dec A
+```
+
+Now given some arbitrary type $$A$$, we ask a decision procedure $$\text{Dec}\ A$$ to find a witness or term that has the type $$A$$. If we given a type such as $$5 > 2$$, a proof of this type would be given. This is looking at $$A$$ as a proposition. But what if $$A$$ looks more like a function? What is $$\text{Dec} (\mathbb{N} \rightarrow \mathbb{N})$$? A decision procedure for a function-type is essentially asking for a term that is a function fulfilling that type. This is essentially the synthesis problem.
+
+The essential observation here is:
+
+$$
+\text{Program Synthesis} \approx_{\textbf{CH}} \text{Decidability}
+$$
+
+Using decidability as a foundational element for synthesis lets us synthesize anything we have a decision procedure for. This is absolutely HUUUGE, for future work in type-based program synthesis.
+
+If we pose a dependent-sum that encodes an [[example-based problem|TypeAndExampleBasedSynthesis]] we can encode it very easily as a type. Then a decision procedure would follow naturally. Some parts of these procedures may need meta-programmatic tools so they can grab definitions that are in the [[scope of the current module|FirstClassModules]].

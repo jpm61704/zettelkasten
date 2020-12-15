@@ -1,0 +1,10 @@
+author: Henrik Muehe and Mikola Lysenko, adapted by Jeremy Ruston
+created: 20200310170609163
+dependents: 
+description: BibTeX importer
+list: readme license
+modified: 20200804223815969
+plugin-type: plugin
+title: $:/plugins/tiddlywiki/bibtex
+type: application/json
+version: 5.1.19

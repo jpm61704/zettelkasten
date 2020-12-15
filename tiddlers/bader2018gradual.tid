@@ -1,0 +1,58 @@
+bibtex-author: Bader, Johannes and Aldrich, Jonathan and Tanter, {\'E}ric
+bibtex-booktitle: International Conference on Verification, Model Checking, and Abstract Interpretation
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 25--46
+bibtex-title: Gradual program verification
+bibtex-year: 2018
+created: 20200817161451613
+creator: Jack
+document: https://drive.google.com/file/d/1vJz_s02Mu8g01Iw84IGEVgfVP6Mp8nof/view?usp=sharing
+modified: 20200929204749724
+modifier: Jack
+title: bader2018gradual
+tmap.id: b92d9ce3-36c5-4d45-b98d-b828e67e8a92
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Referenced By
+** [[wise2019gradual]] 
+** [[mangal2020observational]]
+** [[figueroa2018towards]]
+* Similar references to [[tsai2015synthesizing]]
+** [[reynolds2002separation]]
+** [[burdy2005overview]]
+** [[fahndrich2010embedded]]
+** [[nguyen2008runtime]]
+* Seems very related and potentially more general in some sense than [[tsai2015synthesizing]]. It seems different in its focus though. It doesn't specifically mention heaps early in the paper and is on Hoare, not Separation, logic.
+* Uses the gradual typing methodology of Garcia to give a principled approach to mixing dynamic and static analysis
+
+In program verification over contracts, there are two general approaches towards verification. The first is to statically verify the assertions. Once verified, the user knows that they have a program that meets the contracts present in the code. The second strategy, is to verify the contracts are met using a run-time check through dynamic verification. The problem with this dichotomy is that sometimes a mix of both approaches is desirable over an all-or-nothing perspective. This is where this paper comes in. 
+
+The authors put forth Gradual Program Verification, in which the contracts that can be statically verified are, and the ones that cannot are left around as run-time checks. This is useful for the case when a program's contracts are under-specific and lose some of the necessary information needed for static verification, but can still be verified under a run-time check. The following example was given in the introduction:
+
+
+```
+function withdraw(int balance, int amount)
+  assert(balance > ammount) 
+  balance := balance - ammount;
+  assert(balance > 0)
+  return balance;
+
+balance := 100
+balance := withdraw(balance, 40)
+balance := withdraw(balance, 30)
+```
+
+This program is able to be statically verified for the first call to withdraw, but when it reaches the second call, the assertion that `balance > 0`, from the first call, is insufficient for satisfying the precondition at the beginning of the second call to `withdraw`. 
+
+However, the second call to withdraw could still be verified dynamically with a run-time check which verifies that `balance > 30`. 
+
+It is this sort of situation that gradual typing wishes to solve. They do this by introducing the `?` formula to the logic of verification for these programs. The `?` formula stands for imprecision in formula. It passes whenever, /some/ formula satisfies the specification. The dynamic checker ensures that some instantiation of `?` exists that can satisfy the contract at run-time. Thus the post-condition of `withdraw` is altered to be `assert(balance > 0 ∧ ?)`. This will be filled at runtime with `balance > 30` which is grabbed from the precondition in the second call to `withdraw`. 
+
+! The relationship to Divva. 
+
+The overall methodology of gradual typing may be amenable to Divva. Specifically, the Divva approach may be an instance. This will take some more exploration though to be sure. 
+
+Divva is different in that it specifically wishes to verify data structures over the heap using separation logic. This paper does allude to being extensible to separation logic, but seems different in what it is actually checking at run-time. It doesn't specifically push the failed static verifications to inside of the data structure. The verification is still restricted to properties that can be checked with a run-time call to a decision procedure, where Divva pushes the dynamic verification to /within/ the decision procedure. 

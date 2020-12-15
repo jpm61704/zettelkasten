@@ -1,0 +1,47 @@
+bibtex-author: Albarghouthi, Aws and Gulwani, Sumit and Kincaid, Zachary
+bibtex-booktitle: International conference on computer aided verification
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 934--950
+bibtex-title: Recursive program synthesis
+bibtex-year: 2013
+created: 20200806163204717
+creator: Jack
+document: https://drive.google.com/file/d/1SoMl80pr8CIGPFrWZ79xSmhO5yj07LJL/view?usp=sharing
+modified: 20200818155702433
+modifier: Jack
+title: albarghouthi2013recursive
+tmap.id: bb4ee7d5-7494-49d2-9b49-9654d3f7c363
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Tool'': [[Escher]]
+
+''Figures'': 
+
+* [[Albarghouthi2013RecursiveGraphs.png]]
+* [[Albarghouthi2013RecursiveTable.png]]
+
+''Methods'': Component-based synthesis, and example-based synthesis
+
+The goal of Escher is to be extremely generalized. They parameterize the tool over a set of components which may be provided for each problem. Their method splits synthesis into two steps:
+
+# Forward Propogation
+# Conditional Inference - This step is very similar to the case analysis done in [[osera2015type]]
+
+''Bias'' This strategy must be used on smaller component libraries, so I think they assume the user has some idea of the components to be used. The size of the exploration would get tedious on larger libraries.
+
+Also see [[PatternsInTypeDirectedSynthesis]].
+
+!! An Overview
+
+The authors take as part of the specification a set of input values as a //value vector// and an //output vector// for the correct solutions. They then propagate the examples over conditional branches and compare the altered examples to the goal until a solution is found. 
+
+They begin by enumerating the solutions of a given size(heuristic value) and see if there are any matches on the examples. For instance, in a program that has some input value vector $$\langle \texttt{[], [2], [1, 2]} \rangle$$ and output vector $$\langle \texttt{0, 1, 2} \rangle$$, we have the intention of synthesizing the length function. Given a few components(specifically some common list operations), we start by enumerating all of the solutions of AST size one. This gives the table:
+
+[img width=300 [Albarghouthi2013RecursiveTable.png]]
+
+If there is a match for any of these examples, as there is with 0 in the first position. Then the synthesizer will create a goal graph that branches the isEmpty list into the constructor for zero. This process is continued and the goal graphs are filled which creates a recursive synthesis process. 
+
+[img[Albarghouthi2013RecursiveGraphs.png]]

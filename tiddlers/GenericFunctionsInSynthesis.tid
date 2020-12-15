@@ -1,0 +1,18 @@
+created: 20200313234555227
+modified: 20200804223819583
+tags: <META>ResearchQuestion Synthesis
+title: GenericFunctionsInSynthesis
+tmap.id: aad76e3e-9256-4085-a5b3-bdf1b43728d2
+type: text/vnd.tiddlywiki
+
+It can also be noted that function composition is itself just another function. This makes me wonder to what degree we should remove highly-generic functions from the search space. There is likely a way to measure how generic a function is. Functions with a large number of polymorphic terms, for instance, have a very high amount of generic-ness. Fully concrete function types have absolutely no generic-ness. We should probably favor more or less generic functions in search-based synthesis, but how and to what degree?
+
+No matter what the answer to this question is, it will definitely involve some notion of subtyping or abstract typing. There is probably some metric space that is definable over the typing lattice that nicely describes this.
+
+For instance, a function like composition has the following type:
+
+$$
+\_\cdot\_ : \Pi_{\{A\ B\ C\ :\ \text{Set}\}} (B \rightarrow C) \rightarrow (A \rightarrow B) \rightarrow (A \rightarrow C)
+$$
+
+Because the type of composition includes many polymorphic terms it can be considered highly generic and should be left out of constructions. A metric for generic-ness could be to count the number of terms in a functions type that have the type $$\text{Set}$$(thus introducing polymorphism). This would make the composition function have a polymorphic degree of 3. I'm not entirely sure whether or not this is the right way to think about this though. It will take some more thinking.

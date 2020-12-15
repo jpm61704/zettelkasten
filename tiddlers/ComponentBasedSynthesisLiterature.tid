@@ -1,0 +1,22 @@
+created: 20200804170227671
+modified: 20200804223817694
+tags: 
+title: ComponentBasedSynthesisLiterature
+tmap.id: 81df9086-bf09-4d26-8143-c3e24641480a
+type: text/vnd.tiddlywiki
+
+These papers generally fall under the umbrella of [[component based synthesis|ComponentBasedSynthesis]]. 
+
+* [[mandelin2005jungloid]]
+* [[feng2017component]]
+* [[guo2019program]]
+
+$$
+\begin{array}{cr}
+\text{Mandelin Jungloids}\\
+\downarrow &\text{\footnotesize preceded}\\
+\text{Feng Petri-Nets}\\
+\downarrow &\text{\footnotesize preceded}\\
+\text{Guo Polymorphic Petri-Nets}
+\end{array}
+$$

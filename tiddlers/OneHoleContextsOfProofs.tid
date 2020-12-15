@@ -1,0 +1,50 @@
+created: 20200922211432314
+creator: Jack
+modified: 20200922221314461
+modifier: Jack
+title: OneHoleContextsOfProofs
+tmap.id: 68e0c32b-5522-49a9-b907-82c0f4aff919
+type: text/vnd.tiddlywiki
+
+See also [[OneHoleContexts]].
+
+''RQ'' What is a one-hole context of a proof structure?
+
+$$
+\frac{ }{ \textbf{Sorted } [\ ] } (\mathsf{Nil})\quad
+\frac{ n : \mathbb{N} }{ \textbf{Sorted } [ n ] } (\mathsf{Singleton})
+$$
+$$
+\frac{ n \leq m \quad \textbf{Sorted } (m :: l)}{ \textbf{Sorted } (n :: (m :: l)) } (\mathsf{Cons})
+$$
+
+A proof tree for this property on the list $$[2, 3, 5, 10]$$ looks like:
+
+[img[SortedProof.png]]
+
+
+Now, what happens to the proof if we remove some part of the list via a one-hole context. If we remove the $$5$$ from the list then we are left with the one-hole-context,,1,,:
+
+$$
+\begin{array}{l}
+\textbf{ListCxt} ::= \textbf{List} \times \textbf{List}\\\\
+xs : \textbf{ListCxt}\\
+xs = \langle [2,3] , [10] \rangle
+\end{array}
+$$
+
+Now, to what degree can we re-use the proof that the original list, $$[2, 3, 5, 10]$$, is sorted to construct a proof for a new list constructed from one-hole context above? More pointedly, what is the one-hole context of a value-dependent proof?
+
+First, notice the parts of the proof which depend on the $$5$$ in the original list.
+
+[img[SortedProofFives.png]]
+
+The nature of the dependencies are a bit different between the red and yellow references. The yellow are in type places as a result of the list we are handling. The red parts are the proofs that we are unable to prove in the absence of a value to put there. A proof tree without the fives looks like this:
+
+''PUT IMAGE HERE''
+
+$$
+\circ\circ\circ
+$$
+
+,,1,, This is achieved by differentiating the $$\textbf{List}$$ type with respect to $$\mathbb{N}$$ (For more details see [[OneHoleContexts]]). 

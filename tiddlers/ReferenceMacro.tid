@@ -1,0 +1,12 @@
+created: 20200421031658018
+modified: 20200804223822172
+tags: $:/tags/Macro MyMacros
+title: ReferenceMacro
+tmap.id: 8381b65d-2fa5-41e9-957c-4b386cd6f395
+type: text/vnd.tiddlywiki
+
+\define ref(tiddler)
+  <$link to=$tiddler$>{{$tiddler$!!bibtex-title}}</$link>
+\end
+
+<<ref "chang2019dependent">>

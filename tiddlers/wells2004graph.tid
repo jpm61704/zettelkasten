@@ -1,0 +1,23 @@
+bibtex-author: Wells, Joe B and Yakobowski, Boris
+bibtex-booktitle: International Symposium on Logic-based Program Synthesis and Transformation
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 262--277
+bibtex-title: Graph-based proof counting and enumeration with applications for program fragment synthesis
+bibtex-year: 2004
+created: 20200810162337655
+creator: Jack
+document: https://drive.google.com/file/d/1Zv8z8A5RdwxmAyZ0Cf4px2I_1gnD9_B2/view?usp=sharing
+modified: 20200810165300994
+modifier: Jack
+title: wells2004graph
+tmap.id: 15f489ac-9c9a-4980-8592-a8d074472d42
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Collections'': [[theoretical|TheoreticalResultsInSynthesis]], [[intuitionistic logic|IntuitionisticLogicReferences]]
+
+This work shows a way of counting and enumerating programs in Intuitionistic Logic. The work doesn't seem to extend to algebraic datatypes or even more complicated sums. But overall it would provide a good starting point for a deeper theoretical dive.
+
+This connects to other work in program synthesis in that it provides a theoretical background for the size of the spaces we search in. 

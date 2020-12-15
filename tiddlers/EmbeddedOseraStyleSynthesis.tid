@@ -1,0 +1,10 @@
+created: 20200402000141242
+modified: 20200804223818478
+tags: <META>ResearchQuestion
+title: EmbeddedOseraStyleSynthesis
+tmap.id: fb33b32b-12d9-4da8-9a7b-7e71b751495c
+type: text/vnd.tiddlywiki
+
+Question posed in [[TypeAndExampleBasedSynthesis]].
+
+How can we embed Osera-Style synthesis into a type system directly using decidable functions?

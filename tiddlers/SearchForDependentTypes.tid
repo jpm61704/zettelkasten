@@ -1,0 +1,23 @@
+created: 20200310200708302
+modified: 20200804223822667
+tags: ProgramSearch DependentTypes Hoogle
+title: SearchForDependentTypes
+tmap.id: 1a2843a7-0cb8-498a-99a0-58e6cf22a838
+type: text/vnd.tiddlywiki
+
+Search for Dependently Typed Libraries is a natural extension to tools like Hoogle. In a dependent framework we are not only allowed to search for functions by their type, but also by properties over the function. The most obvious of these is consistency with some set of input-output examples. But this can generalize in a few ways to more interesting properties.
+
+For now, we split the search criteria for dependently-typed languages into two categories:
+
+# Type-Based Search specification - this is likely only going to ever be the type of the desired function. This has no run-time aspect that is related to the function itself
+# Functional Properties - Properties over the functions behavior. This could be anything from [[I/O examples|ExampleBasedSearch]] to algebraic constraints. This will add a rich form of search to the toolbox.
+
+An early realization is that we can look at each of the functional properties in a modular light. We can add support for [[search over I/O examples|ExampleBasedSearch]] and not worry about other properties. Then we can pick another property and add support for that. I would guess that, over time, some patterns emerge and there is some decidable subset of properties on programs that can be used for search. 
+
+If a search procedure such as this can be written, then it can be used for [[program synthesis|ProgramSearchAndProgramSynthesis]].
+
+The form of the search function should be rather abstract.(see [[TheSearchFunction]])
+
+! Implementation
+
+Details on our implementation on search for Agda can be found on its [[project page|TypeSearchForAgda]]

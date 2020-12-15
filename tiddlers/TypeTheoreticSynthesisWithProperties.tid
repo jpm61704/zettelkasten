@@ -1,0 +1,51 @@
+created: 20200820213542335
+creator: Jack
+modified: 20200820220945976
+modifier: Jack
+tags: 
+title: TypeTheoreticSynthesisWithProperties
+tmap.id: 0b9897b2-a04a-4dd1-bc7a-ce8bd5562816
+type: text/vnd.tiddlywiki
+
+The pattern in type-driven synthesis is moving towards more expressive type systems and specifications. If we take the most abstract form of the synthesis specification we are only ever trying to find an inhabitant of some type. More often than not, this will be a type along with some other properties the target must satisfy(most commonly the satisfaction of a set of [[I/O examples|todo]]). This can be succinctly represented as a dependent-sum type(iterated product). 
+
+$$
+\sum_{a : A} P (a) 
+$$
+
+Where $$A$$ is the type of the program we wish to synthesize, $$a$$ is the synthesized program, and $$P : A \rightarrow \text{Set}$$ is a proposition that the target program must satisfy. One such specification could be:
+
+$$
+\sum_{f : \mathbb{N} \rightarrow \mathbb{N} \rightarrow \mathbb{N}} f\ 1\ 2 \equiv 2
+$$
+
+This specification is asking the synthesizer for a term $$f$$ that is a binary operation on the natural numbers $$\mathbb{N}$$ and satisfies the input-output example $$f\ 1\ 2 \equiv 2$$. This is a type-theoretic encoding of the type of specification used in [[osera2015type]]. Now the synthesis problem becomes the problem of finding a witness for this type. It will be the product of the program and a proof that its I/O example holds. 
+
+! Restricting the size of the goal
+
+If we place a size constraint on the AST of the goal $$f$$, we limit the space of solutions significantly. For ASTs of size $$n$$ we get the following:
+
+!! $$n = 0$$
+
+An AST of size zero is nothing more than the starting point of the synthesis process, a single hole containing some typing information.
+
+!! $$n = 1$$
+
+When the size of the program is limited to a single AST node, the synthesizer must find a term that perfectly matches the type of the hole and can have a proof synthesized for the constraining properties. This degenerate case will be encountered in ''every'' terminating synthesizer. It corresponds to a type- and property-based search over the typing environment. 
+
+!! $$n = 2$$
+
+This is the first AST size that permits more interesting behavior because it introduces the ability to use lambda abstractions. 
+
+!! $$n = 3$$
+
+At the point of size 3 ASTs we will see many more possible solutions compared to the previous sizes. At this step we are able to synthesize programs that include function application. But at this size the application must be on a single term. 
+
+!! $$ n > 3$$ 
+
+For larger $$n$$ the complexity of the solution becomes much larger. Most solutions will fall in this case, however, even this case will be comprised of many smaller $$n$$ calls to the synthesizer. 
+
+! The Operations of Type-Theoretic Synthesis with Properties
+
+* Search for a solution to the hole in the environment(Elimination Form/Closes Holes)
+* Expand the AST over a syntactic structure and propagate the properties(Introduction Form/Introduces Holes)

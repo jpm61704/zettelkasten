@@ -1,0 +1,16 @@
+created: 20201120162856922
+creator: Jack
+modified: 20201120163054298
+modifier: Jack
+tags: <CODE>Agda
+title: Length.agda
+tmap.id: 1de02729-985a-400a-b785-6ccfee73e8f9
+type: text/vnd.tiddlywiki
+
+```
+data Length {A : Set} : List A → ℕ → Set where
+  len0 : Length [] zero
+  lenS : ∀ {x xs n}
+       → Length xs n
+       → Length (x ∷ xs) (suc n)
+```

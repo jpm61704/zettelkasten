@@ -1,0 +1,15 @@
+created: 20200730182904072
+creator: Jack
+modified: 20201001141812480
+modifier: Jack
+tags: <META>To-Process
+title: Cosynthesis
+tmap.id: 2b273a87-bac3-46c8-9bdf-90c912e622d2
+type: text/vnd.tiddlywiki
+
+A style of synthesis in which programs are synthesized alongside proofs of properties they must satisfy in their specification. In Example-Driven Type-based synthesis(See [[osera2015type]] and [[feser2015synthesizing]]) this is done by partially evaluating examples as the target function is synthesized. But why need this stop at examples?
+
+The rules below are taken from Osera's 2015 work and the parts of the rules are split into recursive synthesis relations and example propagation relations. My hypothesis is that we can include propagation of other types of proof in a similar way.
+
+[img[exampleprop.png]]
+

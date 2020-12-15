@@ -1,0 +1,17 @@
+created: 20200312231545396
+modified: 20200804223820077
+tags: Reference Memory SmartNotes
+title: Indexing
+tmap.id: 1e33a980-8851-450c-85dd-d93c1970bb47
+type: text/vnd.tiddlywiki
+
+After we have added a note to our slipbox, we will want to be able to find it again. We do this through references from other notes. But then where do we start our search? This is where the index comes in.
+
+* It is important to remember that the references inside of notes are much more important than the references from the index. The index is only a starting off point.
+* The index is to references that are out-of-context. So put some thought into what is in the index and how it is used
+* I will use tags as my index. I'll use them for all of the notes they reference, but primarily use the main tag note as an entrypoint to other parts of the topic.
+* Use the tag pages as overviews for a topic. We will never have an overview of the entire slipbox, just like we can never have an overview of our own memory. Thus we need to have overviews for topics. These topic overviews will change and evolve with time though. So be sure to keep them up-to-date.
+
+<<<
+Assigning keywords/topics/tags to a note is not bureaucratic but creative work.
+<<<

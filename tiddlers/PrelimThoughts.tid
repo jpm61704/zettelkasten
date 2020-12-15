@@ -1,0 +1,54 @@
+created: 20200807171108290
+creator: Jack
+modified: 20200807195903666
+modifier: Jack
+tags: <META>To-Process
+title: PrelimThoughts
+tmap.id: a8af6782-d680-49ba-af22-6ed69bfe20a7
+type: text/vnd.tiddlywiki
+
+``
+Bor-Yuh Evan Chang  1 hour ago
+We’ll probe into why this topic is a substantive topic for a prelim, so your goal is to push on that as far as you can yourself.
+
+Bor-Yuh Evan Chang  1 hour ago
+Remember that the deliverable for the prelim is demonstrating that you can “paint the landscape” on a topic placing related papers on some axes to, ideally, identify a “hole” that would be fruitful to explore.
+``
+
+! Type-Driven Semantic Synthesis - What dependent types can bring to deeper program synthesis
+
+!! Literature Areas
+* Type-Driven Program Synthesis(Of the Osera and Feser style)
+* Component-Based Synthesis specifically(a la Feng, Guo, and Mandelin)
+* Type and Proof Theory
+** Specifically with regard to how we conduct extrinsic proof over functions. There is some work here from the HoTT people. 
+
+!! Gap
+
+The hole I wish to convey is the missing link between type-driven synthesis and using synthesis specifications more complex than I/O examples. Specifically, The Curry-Howard isomorphism implies that synthesis of a program that meets some set of properties is equivalent to the derivation of a program and proof terms for those properties. I believe we will find that the more complex properties will be able to aid in synthesis much in the same way that example propagation helps "aim" the synthesizer in its search.
+
+!! Idea
+
+In the type-and-example driven work of Osera and related works, all the rules incorporate two sub-operations during synthesis:
+
+1. The propagation of examples - Which is equivalent to a proof of the form:
+$$
+\begin{array}{l}
+\text{ex} : f\ 5 \equiv 10\\
+\text{ex} = refl
+\end{array}
+$$
+If we think of Osera-style example propagation as the construction of a  proof of equivalence. We can wonder how we might construct a proof of any property //during// the process of synthesis. 
+
+2. Recursive synthesis of sub-expressions(which includes the generation of a proof that a sub-property holds)
+
+The hole in the literature is generalizing the synthesis of programs with proofs over more than just examples. Functional properties should be able to guide synthesis as well. 
+
+$$
+\circ\circ\circ
+$$
+
+The key observation here is that synthesis of a program satisfying a property is equivalent to the decidability of the existence of a term of the type
+$$
+\Sigma_{[f : \text{Program}]} \text{Property}(f)
+$$

@@ -1,0 +1,11 @@
+created: 20200324021907495
+modified: 20200804223817045
+tags: ProgramSearch Implementation
+title: AgdaReflectionForTypeSearch
+tmap.id: 22370650-d403-4d02-9dda-15445c0df187
+type: text/vnd.tiddlywiki
+
+//An implementation note for // [[TypeSearchForAgda]].
+
+After some initial playing around with Agda's reflection system, it appears that I'll need to figure out how to construct automatically a large type universe to deal with type equality. There isn't a good way to introduce type equality to Agda otherwise. The reflection system does have the AST for the language which will be safe to use. I'll just have to construct the types on my own. I knew this already anyway, Agda won't be able to compile a list of defined functions that can be given to a function. This has to occur at a meta-programmatic level.
+

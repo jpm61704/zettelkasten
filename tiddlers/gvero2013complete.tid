@@ -1,0 +1,56 @@
+bibtex-author: Gvero, Tihomir and Kuncak, Viktor and Kuraj, Ivan and Piskac, Ruzica
+bibtex-booktitle: Proceedings of the 34th ACM SIGPLAN conference on Programming language design and implementation
+bibtex-entry-type: inproceedings
+bibtex-pages: 27--38
+bibtex-title: Complete completion using types and weights
+bibtex-year: 2013
+created: 20200806163430043
+creator: Jack
+document: https://drive.google.com/file/d/125L5OTpopTFj5xaVcDiOx_QRSQjnUTdt/view?usp=sharing
+modified: 20200811001754142
+modifier: Jack
+title: gvero2013complete
+tmap.id: 52aa9044-6d02-41e7-bae0-3f58501ab5cf
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* ''Collections'': [[component-based|ComponentBasedSynthesisReferences]]
+* ''Tool'': [[InSynth]]
+
+* Claims to be an improvement from [[Prospector]] and [[perelman2012type]].
+* Page 27 has a very good synopsis on the treatment of synthesis as the type-inhabitation problem
+
+This paper and the tool InSynth uses restrictions on the search space to yield a very fast completion tool for Scala. They do this through the use of SuccinctTypes, which are fairly standard lambda-calculus types modulo currying and the product equivalences. They use this and a restriction to long-normal form to prune the space down significantly. 
+
+!!! Succinct Types
+
+The authors define succinct types to be of the following form:
+
+$$
+\tau_s ::= \{ \tau_s , .... , \tau_s \} \rightarrow v\quad \text{where } v \in B.
+$$
+
+For some collection of base types $$B$$.
+
+The LHS of the arrow is a set of succinct types that represent arguments to a function. They then use these succinct types to generate concrete terms by fixing the argument positions in pattern and term generation. 
+
+''RQ'' Does there exist succinct types for dependent types?
+
+!!! Long Normal Form
+
+They choose to only generate terms in long-normal form to reduce the search space. Long normal form are the terms which have no partial application of functions. So if $$f : A \rightarrow B \rightarrow C$$, one would write $$(\lambda b. f\ a\ b) : B \rightarrow C$$ instead of $$f\ a : B \rightarrow C$$
+
+!!! Exploration before Generation
+
+They have an iterated approach that starts by generating the types that are reachable from the goal type, after that they generate patterns of the terms(the shape and types they take), and then populate the terms with subterms. The pattern generation step essentially solves the type inhabitation problem without explicitly generating a proof term. The explore phase is ''extremely'' similar to [[mandelin2005jungloid]] and [[feng2017component]](The graphical methods). 
+
+!!! Forward-vs-Backward Reasoning in Synthesis
+
+The authors provide rules that may be forward-reasoned(from the inputs) or backward-reasoned(from the goal). They, as many other synthesis papers do, opt for backward-reasoning. This is a fairly common decision and a fairly common dichotomy. It also deserves some more thought.
+
+''RQ'' What are the tradeoffs between forward/backward reasoning in synthesis? When are each appropriate?
+
+!!! Weights
+
+They weight expressions by the distance from the call site to favor "closer" terms. They also used some mined terms from a corpus. This is a fairly standard pattern for speeding up synthesis.

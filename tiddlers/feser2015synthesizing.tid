@@ -1,0 +1,65 @@
+bibtex-author: Feser, John K and Chaudhuri, Swarat and Dillig, Isil
+bibtex-entry-type: article
+bibtex-journal: ACM SIGPLAN Notices
+bibtex-number: PLDI
+bibtex-pages: 229--239
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: Synthesizing data structure transformations from input-output examples
+bibtex-volume: 50
+bibtex-year: 2015
+collections: [[ExampleBasedSynthesisReferences]]
+created: 20200713005233302
+creator: Jack
+document: https://drive.google.com/file/d/11zRJJ4hQe9eOLGKhM5hj7CyOdq7hxHLE/view?usp=sharing
+modified: 20200818160854588
+modifier: Jack
+readingpass: 2
+title: feser2015synthesizing
+tmap.id: 3be609c3-1398-4894-b5af-4b5576145b16
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Tool'': [[LambdaLearner]]
+
+This paper describes a synthesis tool for a deriving data structure transformations over recursive ADTs. Their approach uses a fairly standard type inference subroutine to eliminate invalid terms, but goes a step further and checks certain properties of the examples to prune out invalid hypotheses. 
+
+!!! Validity from Examples
+
+For instance, while `map f xs` typechecks against the example:
+
+$$
+[1 , 2, 3 ] \mapsto [1,2]
+$$
+
+It clearly will not be a solution because `map` should not alter the size of the list. They describe //valid// example propagation with a set of inference rules for each new higher-order combinator. 
+
+!!! Cost Model 
+
+This work ensures that the synthesized programs are of minimal complexity according to some cost semantics. The cost semantics they define is used to enumerate programs in order of increasing cost, and thus only explores complex solutions after the simple ones have been exhausted. 
+
+//See also// [[CostModelsInSynthesis]].
+
+!!! Generality
+
+The generality of the methods they use isn't discussed much, but it is clear that these methods should transfer to any other recursively defined structure. Something that spoke to me was the modular nature one could define combinators. To define a new combinator all one had to do was to give the definition along with inference rules for example propagation. Once these were defined then the combinator would be usable within the system. 
+
+''RQ'' There is likely some connection between these definitions and [[Osera2015Type]]. I should explore this further. 
+
+!!! Open and Closed Programs
+
+This paper made a very interesting distinction between open and closed terms, namely that open terms are the same as terms that have holes and closed terms are complete solutions. Thus, closed terms should be favored a bit when synthesizing because they will lead to closed solutions. The notion of using open terms to categorize unfinished programs is an interesting one and I wonder how much it has been documented and developed in the past(''RQ'')
+
+!!! Distinguishing between Operators and High-Ordered Combinators
+
+This paper makes the distinction between operators(functions on datatypes) and higher-ordered combinators, which are functions such as `fold`, `map`, and `filter`, that may take functions as arguments. They do this because of the need to constrain the arguments of combinators in order to make their use tractable. More generally, working out when functions should be treated as generic combinators versus simple operations seems to be a fairly nuanced question worth a deeper look.
+
+!!! Random Evaluation
+
+They use a really awesome technique for evaluating the synthesis tool's aim at being usable by those that are not experts in the tool. They accomplish this by randomly generating examples from the desired function and feeding those examples into the synthesis procedure. This should mimic a //really// bad human user. The remarkable thing is that the synthesis procedure worked quite well in this case. 
+
+I definitely want to hold onto this technique for evaluating my work in the future. 
+
+!! Questions after reading
+
+* I was left wondering why there was no exploration into deriving the properties over which we wish to deduce. This seems to me to be a category theoretical problem that should be looked into for the sake of generality. 

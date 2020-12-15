@@ -1,0 +1,36 @@
+bibtex-author: Osera, Peter-Michael and Zdancewic, Steve
+bibtex-entry-type: article
+bibtex-journal: ACM SIGPLAN Notices
+bibtex-number: PLDI
+bibtex-pages: 619--630
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: Type-and-example-directed program synthesis
+bibtex-volume: 50
+bibtex-year: 2015
+created: 20200730192346346
+creator: Jack
+document: https://drive.google.com/file/d/1t8GaXtDvPvSmwrwFH5c-CM9MQFfg9trn/view?usp=sharing
+modified: 20201001141615543
+modifier: Jack
+title: osera2015type
+tmap.edges: {}
+tmap.id: 60aecac7-1995-42f1-b4fd-6b27de4ebe5d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''RQ'' I'm left wondering how //exactly// this is different from [[feser2015synthesizing]]. They both make use of example and types for specification, but their actual inference rules will need some inspection.
+
+Osera's style of synthesis allows for the use of componants(function calls) but doesn't seem to explore the compositional approach of [[feng2017component]]. Marrying the example based approach to a search over the space of component matches would make for a nice extension of both of these lines of work. 
+
+''RQ'' What would a call graph look like w.r.t. a typing graph for a function? What are the graphical views that make sense for this problem?
+
+!!! Inference Rules
+
+[img[exampleprop.png]]
+
+Highlighted in this image are the subparts of each inference rule with respect to their being recursive calls to the synthesis procedure or alterations to the set of examples. Property based synthesis will need to handle the propagation of property proofs in much the same way as examples are done here. Some reflection on how to do more complicated inference over proof terms can be found [[here|Cosynthesis]].
+
+I'm curious if these rules act as a proof of reflexivity for beta normalization? Are these just small-step semantics being applied to the problem "as we go"?
+
+ 

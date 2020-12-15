@@ -1,0 +1,41 @@
+created: 20200414030439768
+modified: 20200804223820662
+tags: 
+title: ModulesInProgramSearch
+tmap.id: bafd3495-03bc-4047-a94f-91683a358d4d
+type: text/vnd.tiddlywiki
+
+[[First class modules|FirstClassModules]] will need to be used for program search. The problem is that they need to support dependency between members. Initially it will be okay to ignore mutual induction. The formalism will use deBruijin indices for naming the variables. Application of Pi-types could be tricky but so far this approach seems like it will work. 
+
+An example of the need for this formalism arises when considering the following two definitions:
+
+$$
+\begin{array}{cc}
+\begin{array}{l}
+\text{C} : \mathbb{B} \rightarrow \text{Set}\\
+\text{C true} = \mathbb{N}\\
+\text{C false} = \text{List }\mathbb{N}
+\end{array} & 
+\begin{array}{l}
+\text{f} : \Pi_{(b : \mathbb{B})} \text{C } b\\
+\text{f true} = 5\\
+\text{f false} = [ 5 ] \\
+\end{array}
+\end{array}
+$$
+
+If this was to be encoded in a type universe for [[program search|TypeSearchForAgda]], then we will need some way of having the type interpretation function refer to the definitions of the terms used in the dependent definitions. Here it is in the type of $$f$$.
+
+We will need to alter our interpretation function($$\text{toType}$$) to support this by changing its type from:
+
+$$
+\begin{array}{ccc}
+\text{toType} : \text{Type} \rightarrow \text{Set} &
+\text{to}\atop\Rightarrow &
+\text{toType} : \text{Module} \rightarrow \text{Type} \rightarrow \text{Set} 
+\end{array}
+$$
+
+The addition of $$\text{Module}$$ essentially acts as a context would in normal type checking. In the $$\text{Type}$$ type we will now include a constructor called $$\text{Var} : \mathbb{N} \rightarrow \text{Type}$$ which will use a natural number as a deBruijin index into the module.
+
+The implementation of [[DeBruijin Indices|DeBruijinIndices]] is fairly tricky and will require some more work to get right. The type universe ends up being an implementation of type checking for MLTT in MLTT. 

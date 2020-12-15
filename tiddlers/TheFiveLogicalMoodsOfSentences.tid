@@ -1,0 +1,22 @@
+created: 20200415233243706
+modified: 20200804223823585
+tags: <META>ResearchQuestion
+title: TheFiveLogicalMoodsOfSentences
+tmap.id: 45fed8e2-652f-4bd1-8638-1042a7c9874b
+type: text/vnd.tiddlywiki
+
+From [["TreatiseOnIntuitionisticTypeTheory"]].
+
+The five logical moods of sentences are:
+
+# Assertives - Stating //what// is true. Imparting knowledge to the listener. 
+# Directives - Attempting to get the hearer to do something
+# Commissives - a commitment of the speaker to a certain action in the future
+# Expressives - communication of the psychological state of the speaker
+# Declaration - the exercise of authority to bring a relation between the content of the sentence and reality. The author argues that definition is of this sort.
+
+<<< 
+To logic, the most important mood is the assertive and many logicians consider no other kind of sentence
+<<<
+
+''RQ'' The above quotation is of interest because we often base our logical systems on assertives and declaration. But what if we instead based a computation system on the other forms of sentences? This could be a fun line of thought in the future.

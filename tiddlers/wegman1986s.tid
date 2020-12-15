@@ -1,0 +1,48 @@
+bibtex-author: Wegman, Mark N
+bibtex-entry-type: article
+bibtex-journal: ACM SIGPLAN Notices
+bibtex-number: SIGPLAN NOTICES
+bibtex-pages: 91--95
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: What it's like to be a POPL referee; or how to write an extended abstract so that it is more likely to be accepted
+bibtex-volume: 21
+bibtex-year: 1986
+created: 20200511141043011
+document: https://drive.google.com/open?id=1NZ5O49yxZVW--Ny7p_GYcqyEACMXcxCE
+modified: 20200804223824295
+title: wegman1986s
+tmap.id: 98333321-af70-49ff-a12f-507260717a26
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+!!! Nuggets of Wisdom
+
+<<<
+The major worry of a referee is rejecting a good paper, or accepting an embarrassing paper.
+<<<
+
+''Question:'' What constitutes a poorly written paper?
+
+* Not covering requisite premises. Assuming the reviewer can see all of the implications and motivations of the work.
+* Says works is similar to X but does not explain the differences
+* Ignores recent work in the area
+* Doesn't do the necessary polishing on the theoretical work and thus angers the theoreticians and confuses the practicioners
+
+<<<
+One thing I found very helpful were examples. An author who at the beginning of the paper says "here's something I can do, and there are no published papers that can do this" make the refereeing process much easier. 
+<<< 
+
+<<<
+The POPL referees don't have the leisure time to sit back and think about examples to prove or disprove the utility of an idea.
+<<<
+
+Split an extended abstract into three sections:
+
+# Introduction - State claims of the paper and five a few examples of what is new and different
+# Body - Make the committee believe the claims made in the intro
+# Comparison - Have we covered the requisite related work?
+
+!!! Thoughts and Take-aways
+
+An extended abstract is all about economy and not jumping any conclusions. Every claim needs to be motivated and put into context. This is more about talking about the environment around the result than the result's details. The reviewer is ''very'' pressed for time so don't fluff and get to the damn point.

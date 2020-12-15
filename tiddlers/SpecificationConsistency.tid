@@ -1,0 +1,12 @@
+created: 20200319171522446
+modified: 20200804223823091
+tags: Synthesis ProgramSearch
+title: SpecificationConsistency
+tmap.id: 88f8efbd-97af-42e0-aec3-f8ac5525c95d
+type: text/vnd.tiddlywiki
+
+The result of a synthesis process may not need to match the specification fully. It seems that we may only need to respect a certain number of the properties in order for something to be a success. Because of these we could introduce consistency of solution to be the percentage(or some other metric) of the propositions that the result satisfies. 
+
+If we view synthesis as a problem which could have some erroneous examples in an example-based spec, it would be incredibly useful to disregard some of the examples. 
+
+See [[TheSearchFunction]].

@@ -1,0 +1,18 @@
+bibtex-author: Kitzelmann, Emanuel
+bibtex-booktitle: International workshop on approaches and applications of inductive programming
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 50--73
+bibtex-title: Inductive programming: A survey of program synthesis techniques
+bibtex-year: 2009
+created: 20200803163915453
+document: https://drive.google.com/file/d/17MXrci0UgzSgRQAkrtFjm9tl0Xo-RLXP/view?usp=sharing
+modified: 20200804223820295
+title: kitzelmann2009inductive
+tmap.id: 5bd75082-49d2-47bd-a7dc-d26eece5c403
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Inductive Programming'' is the movement from specific to general as opposed to deductive programming, which is the movement from general to specific. 
+

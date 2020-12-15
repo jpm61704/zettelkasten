@@ -1,0 +1,19 @@
+created: 20200422071750166
+modified: 20200804223819139
+tags: <META>ResearchQuestion
+title: FavoringExplicitOrImplicitProofs
+tmap.id: aeeca7f2-255c-4a96-94be-05eb2fd4e508
+type: text/vnd.tiddlywiki
+
+<<<
+We prove only a minimal ammount of properties by direct induction on typing or equality judgements.
+
+...
+
+
+The remaining properties are derived from the logical relation later. We believe this makes the proof more extensible and resilient to changes in the formulation of the typing rules
+
+- <<ref abel2017decidability>>
+<<<
+
+What does this paper say about the best design practices for extensible proofs?

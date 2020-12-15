@@ -1,0 +1,22 @@
+bibtex-author: Raths, Thomas and Otten, Jens and Kreitz, Christoph
+bibtex-entry-type: article
+bibtex-journal: Journal of Automated Reasoning
+bibtex-number: 1-3
+bibtex-pages: 261--271
+bibtex-publisher: Springer
+bibtex-title: The ILTP problem library for intuitionistic logic
+bibtex-volume: 38
+bibtex-year: 2007
+collections: [[IntuitionisticLogicReferences]] [[AutomatedTheoremProvingReferences]]
+created: 20200814182007672
+creator: Jack
+document: https://drive.google.com/file/d/1C4Dmvue0LfA8j9HDlS-FWFjTQz-P5R-n/view?usp=sharing
+modified: 20200814185706853
+modifier: Jack
+title: raths2007iltp
+tmap.id: de9b427b-3eb9-4213-ab14-564e16b0991a
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Provides a set of basic benchmarks for testing automated theorem provers over intuitionisitic logics. Could be useful to test dependently typed synthesizers against.

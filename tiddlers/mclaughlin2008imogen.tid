@@ -1,0 +1,22 @@
+bibtex-author: McLaughlin, Sean and Pfenning, Frank
+bibtex-booktitle: International Conference on Logic for Programming Artificial Intelligence and Reasoning
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 174--181
+bibtex-title: Imogen: Focusing the polarized inverse method for intuitionistic propositional logic
+bibtex-year: 2008
+created: 20200811221053495
+creator: Jack
+document: https://drive.google.com/file/d/1JKCPxtGvTpzx1xcodf5e70qoL2AWILmc/view?usp=sharing
+modified: 20200811222211931
+modifier: Jack
+title: mclaughlin2008imogen
+tmap.id: 70391588-32ad-4298-8cef-b1952dc25bcd
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* ''Collections'': [[intuitionistic logic|IntuitionisticLogicReferences]], [[automated theorem proving|AutomatedTheoremProvingReferences]]
+* Predecessor in some sense to [[FCube]]
+
+They use a method of focusing and polarization to achieve better performance over predecessors on some problems described in the ILTP Library. 

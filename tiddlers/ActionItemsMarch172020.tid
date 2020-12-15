@@ -1,0 +1,17 @@
+created: 20200317161458652
+modified: 20200804223816977
+tags: MeetingNotes
+title: ActionItemsMarch172020
+tmap.id: bec431ee-0eee-4382-94ff-d791db0240b2
+type: text/vnd.tiddlywiki
+
+* come up with some Functional-FrozenLake-ish example
+** Assume we have a working RL technique for recursive functions. What could we do with it?
+** Assume that this synthesizes a function
+* write up a complete-ish FRL library
+* Read [[Type-based data structure verification |https://dl.acm.org/doi/pdf/10.1145/1542476.1542510?casa_token=J-swKrbVv3gAAAAA:p8R6_W0YfNluOeogAfMJ6Ccv_0d0gnjFASf8WrFaP2xKrqR87epnGqogNn3ka4ZHu76LT8Gw0NrIlQ]]
+* Look into PPL/RL papers - write a related works section
+* Create a repo with the paper
+
+# have capability to learn MDPs. learn to use RL
+# What can this technique do for us? What are some applications to FRL?

@@ -1,0 +1,29 @@
+bibtex-author: Hamming, Richard R
+bibtex-entry-type: book
+bibtex-publisher: CRC Press
+bibtex-title: Art of doing science and engineering: Learning to learn
+bibtex-year: 1997
+created: 20200803162840445
+modified: 20200804223819657
+tags: <META>To-Process Reference
+title: hamming1997art
+tmap.id: dac803e7-19cf-4951-b4e9-6e448d4afe2d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+
+<<<
+The purpose of computing is insight, not numbers
+<<<
+
+This observation is something we computer scientists often forget. We tend to get captured by the beautiful mathematics we stumble into and forget the main problem of insight. Numbers can be abstract to be any mathematical tool. The math isn't the answer, but the medium. 
+
+''PG 49'' In the first paragraph on this page, Hamming chooses to favor psychologically influenced languages over logically influenced ones. This comes after a reflection on the failure if Algol, which is one such logic language. I am struck by his choice because, I think, when it comes to programming, psychology and logic ought to converge. The goal of the PL researcher is to make the logical specification so natural to the programmer that it is lost in the thoughts being written down. His preference feels like a false dichotomy when viewed through today's eyes. 
+
+''PG 51'' Hammy lays out his four rules for designing a programming language.
+
+# Easy to learn
+# Easy to use
+# Easy to debug
+# Easy to use subroutines  

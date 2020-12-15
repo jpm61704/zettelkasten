@@ -1,0 +1,10 @@
+created: 20200813221509877
+creator: Jack
+modified: 20200813221634432
+modifier: Jack
+tags: 
+title: TheLackOfCommonTheory
+tmap.id: af027e37-a8a7-4ea9-9f34-c9cc8cec6413
+type: text/vnd.tiddlywiki
+
+While there is a lot of work in the area, synthesis papers tend to have any common or unifying theory. There is a degree of this due to the dimensions in program synthesis described by Gulwani. But past this there is very little technical commonality, the mathematics feels like it is missing. 

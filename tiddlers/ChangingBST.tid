@@ -1,0 +1,69 @@
+created: 20201013115152734
+creator: Jack
+modified: 20201013161101996
+modifier: Jack
+title: ChangingBST
+tmap.id: 360cf9c1-7d33-4772-a564-e2cd8b520b3c
+type: text/vnd.tiddlywiki
+
+The two rules that define the search property for a binary tree are:
+
+$$
+\frac
+{ \begin{array}{cc}
+  v \leq m & \text{BST}_{[v,m]}\ r\\
+  n \leq v & \text{BST}_{[n,v]}\ l
+\end{array}}
+{ \text{BST}_{[n,m]}\ (\text{Node } l\ v\ r)}
+\quad 
+\frac{}{\text{BST}_{[-,-]}\ \text{Leaf}}
+$$
+
+Now let's consider a change in some value $$v$$ in the first rule above. What must be recomputed in the proof tree in this event? We can safely ignore the terminal case, as it won't ever use the term $$v$$. Below are all the references to $$v$$:
+
+$$
+\frac
+{ \begin{array}{cc}
+  {\color{red}v} \leq m & \text{BST}_{[{\color{red}v},m]}\ r\\
+  n \leq {\color{red}v} & \text{BST}_{[n,{\color{red}v}]}\ l
+\end{array}}
+{ \text{BST}_{[n,m]}\ (\text{Node } l\ v\ r)}
+$$
+
+Which gives the following rules:
+
+$$
+\frac
+{ \begin{array}{cc}
+  v \leq m & \text{BST}_{[v,m]}\ r\\
+  {\color{red}n} \leq v & \text{BST}_{[{\color{red}n},v]}\ l
+\end{array}}
+{ \text{BST}_{[{\color{red}n},m]}\ (\text{Node } l\ v\ r)}
+\quad
+\frac
+{ \begin{array}{cc}
+  v \leq {\color{red}m} & \text{BST}_{[v,{\color{red}m}]}\ r\\
+  n \leq v & \text{BST}_{[n,v]}\ l
+\end{array}}
+{ \text{BST}_{[n,{\color{red}m}]}\ (\text{Node } l\ v\ r)}
+$$
+
+So, to reconstruct one of these proofs in the event of a change, we need a list of inequalities that need to be checked again.
+
+This gives us a help for short-circuiting:
+
+$$
+sc_t : (x : \mathbb{N}) \rightarrow \text{List } (\Sigma_{(n \in \mathbb{N})} n \leq x) \rightarrow \text{List } (\Sigma_{(m \in \mathbb{N})} x \leq m) \rightarrow \text{BST } t
+$$
+
+Or because we can decide all of the list arguments, we get a condensed decision procedure:
+
+$$
+sc : \text{Dec (BST } t)
+$$
+
+We can then get run-time short circuiting by forgetting the BST proof using a maybe. 
+
+$$
+\text{isBTree} : \text{Dec } (\text{BST } t) \rightarrow \text{Maybe BTree}
+$$

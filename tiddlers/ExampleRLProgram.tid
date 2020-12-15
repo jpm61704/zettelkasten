@@ -1,0 +1,27 @@
+created: 20200317002852290
+modified: 20200804223818998
+tags: FRL
+title: ExampleRLProgram
+tmap.id: 77af4e7d-3ee1-4b5a-814d-222ff7ef6a38
+type: text/vnd.tiddlywiki
+
+Ashutosh posed the following example for a program in a language which natively supports Reinforcement Learning:
+
+```
+while loc != 15
+  move = _
+  loc'  = makeMove(move)
+  qlearner.train(loc', move)
+```
+
+Which is can have its hole filled with a qlearner:
+
+```
+while loc != 15
+  move = qlearner(loc)
+  loc'  = makeMove(move)
+  qlearner.train(loc', move)
+```
+
+An observation I made is that no matter how we formulate this example, it will have some encoding into [[FunctionalReinforcementLearning(FRL)]]. There is an opportunity to stop training and just place the qlearner statically in the hole, but this is just a pre-runtime computation to compute a final program that doesn't contain the training loop. 
+

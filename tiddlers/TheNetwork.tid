@@ -1,0 +1,51 @@
+created: 20200713230747923
+creator: Jack
+modified: 20200918235909592
+modifier: Jack
+tags: TheNetwork
+title: TheNetwork
+tmap.id: a440a7a5-2661-4905-a327-611f55897c2f
+type: text/vnd.tiddlywiki
+
+These are a list of papers I'm going to try and build a deep network of connections between to begin exploring the area for my prelim.
+
+Also related: [[Component-Based Synthesis|ComponentBasedSynthesis]]
+
+<$button class="tc-btn" popup=<<qualify "$:/temp/popuppapers">>>
+Papers
+</$button>
+<$button class="tc-btn" popup=<<qualify "$:/temp/popupcol">>>
+Collections
+</$button>
+<$button class="tc-btn" popup=<<qualify "$:/temp/popuptools">>>
+Tools
+</$button>
+<$button class="tc-btn" popup=<<qualify "$:/temp/popupobs">>>
+Observations
+</$button>
+
+<$reveal type="nomatch" state=<<qualify "$:/temp/popuppapers">> text="">
+
+{{TheNetworkPapers}}
+</$reveal>
+
+<$reveal type="nomatch" state=<<qualify "$:/temp/popupcol">> text="">
+
+!! Collections
+
+{{TheNetworkCollections}}
+</$reveal>
+
+<$reveal type="nomatch" state=<<qualify "$:/temp/popuptools">> text="">
+
+!! Tools
+
+{{TheNetworkTools}}
+
+</$reveal>
+
+<$reveal type="nomatch" state=<<qualify "$:/temp/popupobs">> text="">
+
+!! Observations
+{{TheNetworkObservations}}
+</$reveal>

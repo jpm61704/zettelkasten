@@ -1,0 +1,13 @@
+created: 20200407222100794
+modified: 20200804223818336
+title: DependentTypes
+tmap.id: e09d6480-20aa-49bb-86c8-d95392a16906
+type: text/vnd.tiddlywiki
+
+! Notes
+* [[Setoids]]
+* [[ReflexivityIsDefinition]]
+
+! References
+* <<ref "chang2019dependent">>
+* <<ref "abel2017decidability>>

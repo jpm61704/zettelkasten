@@ -1,0 +1,14 @@
+created: 20200310171115228
+modified: 20200804223819514
+tags: ReinforcementLearning
+title: FunctionalReinforcementLearning(FRL)
+tmap.id: 87e45321-2994-43a5-bf28-efed1dd62ddd
+type: text/vnd.tiddlywiki
+
+A reinforcement learner in a language like Haskell basically takes the form of a record type with the following entries:
+
+# a reward function `State -> Action -> Reward`
+# a transition function `State -> Action -> State`
+# possible states `State -> List State`
+
+With these three functions we can use a QLearning algorithm to learn a set of desired behaviors. These three functions are generalized by [[monadic RL functions|MonadicFRL]].

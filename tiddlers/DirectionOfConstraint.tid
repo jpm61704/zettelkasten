@@ -1,0 +1,60 @@
+created: 20200820010926978
+creator: Jack
+modified: 20200820013134664
+modifier: Jack
+title: DirectionOfConstraint
+tmap.id: 575509d7-779b-4cd7-8a74-b3f81c8805e8
+type: text/vnd.tiddlywiki
+
+In a property-based synthesis procedure given as a dependent-sum, constraints on the synthesis of each part of the problem are directed in the following manner:
+
+$$
+\sum_{a : A } P(a)\\\\
+$$
+$$
+\begin{array}{cr}
+\text{Goal Type}\\
+A\\
+\Downarrow & \text{\small{constrains}}\\
+\text{Property Constraint}\\
+P(a)\\
+\Downarrow & \text{\small{constrains}}\\
+\text{Synthesized Term}\\
+a = ... \\
+\Downarrow & \text{\small{constrains}}\\
+\text{Proof of Property Constraint}\\
+p(a)
+\end{array}
+$$
+
+What this means, is that if the term above a term is fixed, it has made the maximum possible constraint on the search for the current term. There should be a proof for this and it could be a pretty cool theoretical result. The interesting part of the this situation is for when the term above is not fixed, and we wish to co-synthesize at multiple levels at a time. While the terms above may constrain the problem, they will also inform the lower term's synthesis. 
+
+That all being said, if there is a dead-end with a lower term, it may require back-tracking in the terms above.
+
+! Fixing the Goal Type
+
+If we are trying to synthesize something of the form:
+
+$$
+\begin{array}{l}
+\text{goal} : \sum_{a : \square} \square(a)\\
+\text{goal} = \square\ , \square
+\end{array}
+$$
+
+At this point the candidate terms contains the entire term-space of the language. By fixing the type of $$a$$, we place the first constraint on the synthesizer and force the dependent-terms to operate on the goal type. In the running example we will fix $$a$$ to be a binary function on the booleans.
+
+$$
+\begin{array}{l}
+\text{goal} : \sum_{a : \mathbb{B} \rightarrow \mathbb{B} \rightarrow \mathbb{B}} \square(a)\\
+\text{goal} = \square\ , \square
+\end{array}
+$$
+
+By fixing the goal type we have constrained the first hole of the term-part and the second hole in the type-part. Now we will further constrain the problem by requiring the term $$a$$ to satisfy a functional property.
+
+! Fixing the Property Constraint
+
+! Fixing the Goal Term
+
+! Fixing the Property Proof

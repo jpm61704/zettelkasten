@@ -1,0 +1,19 @@
+created: 20200407222026386
+modified: 20200804223822806
+tags: 
+title: Setoids
+tmap.id: 08888451-a4a4-44f4-9de2-2232d53024bc
+type: text/vnd.tiddlywiki
+
+The preferred method of encoding classical sets into a calculus of [[dependent types|DependentTypes]]. There are a few different definitions of setoids but they general fall into two categories:
+
+# ''Total Setoids'' - Which is a record containing a carrier type $$T$$, a binary relation on that type $$P$$, and a proof that $$P$$ is an equivalence relation over $$T$$.
+# ''Partial Setoids'' - The same as a total setoid except that the binary relation only needs to be a partial equivalence relation(i.e. it need not be reflexive)
+
+There are four different encodings of partial setoids which vary in the way they handle extensionality of functions as well as the allowed domains for functions[1]. Two of these encodings are equivalent(up to equivalence of Categories) to Total Setoids and Two are slightly weaker and preserve Partiality. 
+
+One of the key differences between total and partial setoids lies in how they handle defined/undefined inhabitants of types. See [[ReflexivityIsDefinition]]. Setoids could play a major [[role in synthesis|SetoidsForSynthesis]], especially when considering [[ReflexivityIsDefinition]].
+
+! References
+
+[1] [[Setoids in Type Theory|"SetoidsInTypeTheory"]]

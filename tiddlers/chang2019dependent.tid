@@ -1,0 +1,25 @@
+bibtex-author: Stephen Chang, Michael Ballantyne, Milo Turner and William J Bowman
+bibtex-entry-type: article
+bibtex-journal: Proceedings of the ACM on Programming Languages
+bibtex-number: POPL
+bibtex-pages: 1--29
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: Dependent Type Systems as Macros
+bibtex-volume: 4
+bibtex-year: 2020
+created: 20200421022429683
+document: https://drive.google.com/file/d/1zWpJfPjaBgTuf8iAJjNaTxepEnicf9Kv/view?usp=sharing
+modified: 20200804223817472
+title: chang2019dependent
+tmap.id: e1111f87-8ab5-4e27-a86a-522c194ad114
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+;What is the gist of this paper? 
+:Type checking for dependent types can fit nicely into a macro system for a language like Racket. It presents a modular approach towards building dependent type systems.
+;What are the paper's main contributions?
+: 1. //TURNSTILE+// a tool/embedded language in racket for specifying dependent type systems through macros
+: 2. A great general literature review for topics in dependent types
+;Why does this matter to my research interests?
+:This paper piqued my interest as one of the papers that covered dependent types at POPL this year. It ended up providing an interesting application of macros that I don't see being super useful in my own work. The references in the paper provided some good leads though.

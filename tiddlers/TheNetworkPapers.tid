@@ -1,0 +1,54 @@
+created: 20200813165340367
+creator: Jack
+modified: 20200918235939211
+modifier: Jack
+tags: TheNetwork
+title: TheNetworkPapers
+tmap.id: 2a736302-dd95-488c-b811-246e5bd90543
+type: text/vnd.tiddlywiki
+
+* Round 1
+** [[feser2015synthesizing]]
+** [[feng2017component]]
+** [[osera2015type]]
+* Round 2
+** [[kitzelmann2009inductive]]
+** [[perelman2012type]] 
+** [[mandelin2005jungloid]]
+** [[albarghouthi2013recursive]]
+** [[gvero2013complete]]
+* Round 3
+** [[wells2004graph]]
+** [[statman1979intuitionistic]]
+** [[delahaye1999information]]
+** [[ferrari2010fcube]]
+** [[mclaughlin2008imogen]]
+** [[furnas1987vocabulary]]
+** [[holmes2005using]]
+** [[sahavechaphan2006xsnippet]]
+** [[thummalapenta2007parseweb]]
+** [[chatterjee2009sniff]]
+* Round 4
+** [[raths2007iltp]]
+*ToRead
+** [[osera2019constraint]]
+** [[frankle2016example]]
+** [[guo2019program]]
+** [[siek2007gradual]]
+** [[czajka2018hammer]]
+** Program Refinement Calculi
+*** [[vonWright1994program]] 
+* Verification Literature
+** [[bader2018gradual]]
+** [[reynolds2002separation]]
+** Common between [[bader2018gradual]] and [[tsai2015synthesizing]]
+*** [[reynolds2002separation]]
+*** [[burdy2005overview]]
+*** [[fahndrich2010embedded]]
+*** [[nguyen2008runtime]]
+** Work that references [[bader2018gradual]]
+*** [[wise2019gradual]] 
+*** [[mangal2020observational]] 
+*** [[figueroa2018towards]] 
+* More
+** [[mcbride2001derivative]]

@@ -1,0 +1,29 @@
+created: 20200309170238884
+modified: 20200804223821730
+tags: Synthesis ProgramSearch
+title: ProgramSearchAndProgramSynthesis
+tmap.id: 685d3f28-e3b8-4e2b-990c-5766233d8159
+type: text/vnd.tiddlywiki
+
+It goes without saying that, if a problem has already been solved, then it's solution is somewhere to be found. In the context of programming, this is akin to trying to find a known solution to a problem(function) in a collection of solutions(a library or module). While searching for a function in a library is no small task, if we had a search procedure that worked well, we could use it for program synthesis.
+
+This observation comes from the following example. I need to find a solution to the synthesis problem posed by the following partial function:
+
+$$
+\begin{array}{l}
+f : A \rightarrow B \rightarrow C\\
+f = \square
+\end{array}
+$$ 
+
+Where $$\square$$ is a hole in the program. 
+
+If we further specify this problem with some examples of behavior and/or properties which it should respect, we could search for a solution. This is also equivalent to placing a restriction that the synthesis solution must have an AST size/depth of 1. Viewed in the dimension of solution size, this constitutes the simplest and most fundamental sort of synthesis procedure. Which poses the question: Can a simple search procedure be used as a foundation for more complicated synthesis methods?
+
+We look at an example of using search as a basis for more complicated synthesis in [[Compound-Search Synthesis|CompoundSearchSynthesis]].
+
+[[Search over Dependent Types|SearchForDependentTypes]] offers a natural starting point for this research. 
+
+! Related 
+
+* This can act as a foundation for [[ComponentBasedSynthesis]].

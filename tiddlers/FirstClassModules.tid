@@ -1,0 +1,38 @@
+created: 20200402000405861
+modified: 20200804223819371
+tags: 
+title: FirstClassModules
+tmap.id: 073289d4-5d12-401c-ac44-1cb22053f02a
+type: text/vnd.tiddlywiki
+
+One of the last things we cannot meta-program/generically program over are modules. There doesn't exist any easy way to:
+
+* get a list of all the names in a module
+* get a list of functions/terms that meet a type in a module
+* reorder a module's elements(while respecting dependencies)
+* add definitions to a module
+* remove definitions from a module
+
+These operations may have sound, type-theoretic approaches if they operate on $$\Sigma$$-types (See [[reminder|RecordsAreModulesAreSigmaTypes]]). But regardless, this seems like a library of reflection-based tools that is obviously useful, specifically for [[Synthesis]].
+
+! Program Search
+
+Program search is one of the obvious uses for something like this. If we have a module and want to convert it into something we can program over, the main thing we need is a list which contains dependent pairs inside it. The first element is a type and the second is the function from the module
+
+$$
+\begin{array}{l}
+\text{Module} : \text{Set}\\
+\text{Module} = \text{List } (\Sigma[ \tau : \text{Type}_\text{embedded} ]\ \text{toType } \tau)
+\end{array}
+$$
+
+One such operation on this list could be to filter over all of the types/terms that have some decidable property. Equality to some other type could be one of these.
+
+$$
+\begin{array}{c}
+\circ\circ\circ
+\end{array}
+$$
+//The following is an excerpt from [[ModulesInProgramSearch]].//
+
+{{ModulesInProgramSearch}}

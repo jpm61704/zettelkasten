@@ -1,0 +1,47 @@
+created: 20200928150322477
+creator: Jack
+modified: 20201002173135047
+modifier: Jack
+tags: 
+title: OneHoleContextTreeProofs
+tmap.id: a1a1bda1-9c31-4d46-aaeb-62a60e813f42
+type: text/vnd.tiddlywiki
+
+See also [[OneHoleContexts]] and [[OneHoleContextsOfProofs]].
+
+$$
+\frac{ }{\textbf{BST Leaf}}(\textsf{Leaf}_\textsf{BST})
+$$
+$$
+\frac
+{ \begin{array}{cc}
+  \textbf{BST}_{[n_l,m_l]} t_l & \textbf{BST}_{[n_r,m_r]} t_r\\
+  m_l \leq v & v \leq n_r 
+\end{array}
+ }
+{\textbf{BST}_{[n_l, m_r]} (\textbf{Node } t_l\ v\ \ t_r) }(\textsf{Node}_\textsf{BST})
+$$
+
+
+
+Given a function `setRoot` that takes a tree and sets its root to a new value:
+
+```
+setRoot : Nat -> BTree -> BTree
+setRoot v Leaf = (Node Leaf v Leaf)
+setRoot v (Node l _ r) = (Node l v r)
+```
+
+If we apply this function to a Binary Search Tree, what do we get? In the tree itself, we get a context that can construct the resultant tree once we have an argument for v. For the proof tree we lose a bit more information.
+
+[img[CommutingTreeProofsChange.png]]
+
+The big takeaway from this figure is that a small change in the non-dependent structure, yields a larger change(relatively) to the proof-theoretic structure. This creates a larger function on the proofs that are effected by a change in $$n$$. Because the ordering of numerals is decidable, we can always calculate this. Which makes it mostly a non-issue. This is the place in which Divva injects run-time checking.
+
+The minimal amount of checking Divva needs to do will be to determine the subparts of the BST proof that are changed in light of a change to some part of the tree it describes. What Divva does, essentially, is work out how to preserve proof trees when the underlying structure is changed. Because one-hole contexts are an excellent mechanism for describing changes in data structures, they can be used to see just where our proofs are altered. 
+
+''RQ'' The big question now is how to detect, and inject these checks when possible? When can a property like the search property be preserved? How do we identify the parts of the proof that can stay and which should go? 
+
+Here is another example for a function that sets the right subtree to a new value:
+
+[img[BSTSetRight.png]]

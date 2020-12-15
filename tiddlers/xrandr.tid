@@ -1,0 +1,13 @@
+created: 20201015231714659
+creator: Jack
+modified: 20201015232412608
+modifier: Jack
+title: xrandr
+tmap.id: 3706a743-027f-4857-8785-1c182cb48d3a
+type: text/vnd.tiddlywiki
+
+
+```
+xrandr --output DP2 --scale 2x1.8
+xrandr --output DP2 --pos 0x-1200
+```

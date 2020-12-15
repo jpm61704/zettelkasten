@@ -1,0 +1,41 @@
+created: 20200316163438956
+modified: 20200804223818619
+tags: ProgramSearch
+title: ExampleBasedSearch
+tmap.id: 4271cc97-de6b-4f99-9333-83195909ffa0
+type: text/vnd.tiddlywiki
+
+<<<
+How do we use I/O examples when search for a function in a library?
+<<<
+
+! Setup
+
+Prior: We are given a collection of functions of the type $$A \rightarrow B$$ and a set of input-output examples $$\textsf{List }(A \times B)$$. We also assume that the examples are compatible with being generated from a function(i.e. there are no repeated elements in the domain defining different mappings to the co-domain).
+
+Goal: We wish to search for the subset of the functions in the collection which satisfy, or are //consistent// with, the set of examples. 
+
+Motivation: This provides another constraint which can be used to look for a function in a collection for the process of proof-search. 
+
+! Solution
+
+The simplest procedure for examples is:
+
+# perform type-based search to get a set of functions of the provided type
+# for every function in the set:
+## feed it an input from the I/O pairs
+## compare it to the desired output
+## if it matches then continue to the next example, else throw out the function
+
+This procedure could be augmented to support partial consistency with the examples which may be desired for some applications(including [[synthesis|ProgramSearchAndProgramSynthesis]]). This, strictly speaking, is a different property from complete consistency though, and thus should warrant its own procedure.
+
+The results from the procedure above are the results for the search. It should be noted that we require the output type $$B$$ to have decidable equality so that we can compare the output examples to the output of the proposed search result.
+
+$$
+\begin{array}{c}
+\circ\circ\circ
+\end{array}
+$$
+Note: We need the functions in the collection to be of the same type because they must support the provided I/O examples. This forces example-based search to be a method applied only after the initial type-search occurs. [[Do all property-based methods require type-search to occur first?|OrderOfSearchSteps]]
+
+This is a method for [[searching over dependent types|SearchForDependentTypes]].

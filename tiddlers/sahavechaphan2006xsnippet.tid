@@ -1,0 +1,21 @@
+bibtex-author: Sahavechaphan, Naiyana and Claypool, Kajal
+bibtex-booktitle: Proceedings of the 21st annual ACM SIGPLAN conference on Object-oriented programming systems, languages, and applications
+bibtex-entry-type: inproceedings
+bibtex-pages: 413--430
+bibtex-title: XSnippet: mining for sample code
+bibtex-year: 2006
+collections: [[CodeReuseReferences]] [[ProgramSearchReferences]]
+created: 20200813164442962
+creator: Jack
+document: https://drive.google.com/file/d/1C2atUI_WMtzs3Qxuv9Udo9rPsyIuVeIU/view?usp=sharing
+modified: 20200813202949910
+modifier: Jack
+title: sahavechaphan2006xsnippet
+tmap.id: 00c7c56e-1ad6-4a5a-bae5-4e3ce4d033df
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Authors claim improvements over [[mandelin2005jungloid]] and [[holmes2005using]]. 
+* Their example search is similar to [[holmes2005using]] except with levels of context sensitivity that can be adjusted by the user. So that if they know their code doesn't need anything from the context they can indicate that. More context obviously provides better solutions but can also over-constrain the problem.
+* Roughly in the area if "code example search" and code reuse

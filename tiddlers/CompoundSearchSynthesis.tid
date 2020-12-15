@@ -1,0 +1,51 @@
+created: 20200313024303008
+modified: 20200804223817765
+tags: Synthesis ProgramSearch
+title: CompoundSearchSynthesis
+tmap.id: bafb4454-ec89-4c84-ab1e-4a67364349f6
+type: text/vnd.tiddlywiki
+
+Let's see an example of a compound search procedure as was mentioned at the end of [[ProgramSearchAndProgramSynthesis]]. Imagine that we wish to synthesize the following function:
+
+$$
+\begin{array}{l}
+\text{last} : \text{List } a \rightarrow a\\
+\text{last} = \text{head} \cdot \text{reverse}
+\end{array}
+$$
+
+To start off the synthesis, let's say we have the impression that this can be synthesized by composing two function. This gives the following template:
+
+$$
+\begin{array}{l}
+f : \text{List } a \rightarrow a\\
+f = \square_1  \cdot \square_2
+\end{array}
+$$
+
+We also provide some examples:
+
+$$
+\begin{array}{rcl}
+[1,2,3] & \mapsto & 3 \\
+[1,2] & \mapsto & 2 \\
+[4,6,4] & \mapsto & 3 
+\end{array}
+$$
+
+The synthesis procedure could notice a dependency between the two holes in their types. This is through an ambiguous type variable $$\alpha$$.
+
+* $$\square_2 : \text{List } a \rightarrow \alpha$$ because the second hole will take the input of the function as input and return some intermediate type $\alpha$
+ *  $$\square_1 : \alpha \rightarrow a$$ because the output of the first hole must agree with the output of the synthesized function. The input must be whatever $\alpha$ is decided by the second hole.
+
+We can synthesize either hole first, but filling one hole ''will'' induce constraints on the other. If $$\square_2$$ is given first, then the examples may be propagated along to give an intermediate set of examples. In this sense, it may be better to synthesize the second hole first. There are likely other times where synthesizing the first hole will be beneficial more though.This leaves a question of: [[which hole first?|WhichHoleFirst]]
+
+! Related
+
+* This is a type of [[ComponentBasedSynthesis]].
+
+! Follow-ups and further questions
+
+* [[HowManyHoles]]
+* [[GenericFunctionsInSynthesis]]
+* [[WhichHoleFirst]]

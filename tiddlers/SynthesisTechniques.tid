@@ -1,0 +1,11 @@
+created: 20200714020929005
+modified: 20200804223823442
+tags: 
+title: SynthesisTechniques
+tmap.id: b1af56c4-4f17-49e1-9f2f-c81c434bfb9f
+type: text/vnd.tiddlywiki
+
+//A list of Synthesis techniques I have come across in the literature.//
+
+* [[Cost Models for Simplicity Bias|CostModelsInSynthesis]]
+* [[Examples as Specification|ExampleBasedSynthesis]]

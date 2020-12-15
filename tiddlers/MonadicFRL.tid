@@ -1,0 +1,20 @@
+created: 20200313223003735
+modified: 20200804223820730
+tags: ReinforcementLearning
+title: MonadicFRL
+tmap.id: 240f8fbd-8bf2-4893-a541-1439814dbafc
+type: text/vnd.tiddlywiki
+
+A more general set of types can be given for the functions specifying a reinforcement learner(see [[FunctionalReinforcementLearning(FRL)]]) this formulation will allow for a monad to "hook into" the function and give it access to stochastic, probabilistic, non-deterministic, etc computations.
+
+# a reward function `State -> Action -> Reward`
+# a transition function `Monad  m => State -> Action -> m State`
+# possible states `State -> List State`
+
+This allows for there to be probability distributions over the state we transition to(along with other monadic functionalities).
+
+The form of the probabilistic transition is:
+
+``State -> Action -> Dist State``
+
+With these other kinds of transition functions we need to work out whether we should allow [[monadic reward|MonadicRewards]] and [[possible state|MonadicStates]] functions as well. It will also change the sorts of learning procedures we use. QLearning can work for this, but there may be better methods available. 

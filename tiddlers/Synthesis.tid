@@ -1,0 +1,32 @@
+created: 20200325011824179
+creator: Jack
+list: 
+modified: 20200924194050385
+modifier: Jack
+tags: <META>Index
+title: Synthesis
+tmap.id: e0c9c137-b876-49cb-80cc-548478a13934
+type: text/vnd.tiddlywiki
+
+! Dependently Typed Program Synthesis
+
+Program Synthesis over the calculus of dependent types. [[Program Search|ProgramSearchAndProgramSynthesis]] provides an interesting jumping off point for the general problem, both as a degenerate case and also as a tool for [[larger synthesis solutions|CompoundSearchSynthesis]]. A key observation in dependently typed synthesis is that it is [[isomorphic to decidability|SynthesisIsDecidability]].
+
+! Literature
+
+See [[TheNetwork]] and [[SynthesisTechniques]].
+
+! Consistency
+
+A solution to a synthesis specification can have varying [[levels of consistency|SpecificationConsistency]] against that spec. A nearly-perfect solution may often be preferable to not having one at all.
+
+! Open Research Questions 
+* [[TypingTree]]
+* [[InformationAndTypes]]
+* [[SpecificationConsistency]]
+* [[GenericFunctionsInSynthesis]]
+* [[EmbeddedOseraStyleSynthesis]]
+* [[Setoids and the role of reflexivity in synthesis|SetoidsForSynthesis]]
+
+! Other
+* [[ComponentBasedSynthesis]]

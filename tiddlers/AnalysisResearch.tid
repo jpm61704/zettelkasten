@@ -1,0 +1,34 @@
+created: 20200812223813683
+creator: Jack
+modified: 20201015160950556
+modifier: Jack
+title: AnalysisResearch
+tmap.id: 3bc53808-c124-42f7-8651-1c660a26a6a1
+type: text/vnd.tiddlywiki
+
+* Goal: publish [[tsai2015synthesizing]]
+* Thoughts around [[decidability|DecisionProceduresAndDivva]]
+* [[OneHoleContexts]]
+** [[OneHoleContextsOfProofs]]
+** [[mcbride2001derivative]]
+** [[OneHoleContextTreeProofs]]
+* Changing proofs
+** [[ChangingProofs]]
+** [[ChangingBST]]
+** [[DecidabilityComposition]]
+* positivity
+** [[StrictlyPositiveTypes]]
+** [[StrictlyPositiveFamilies]]
+** [[morris2007constructing]]
+
+! Resources
+
+* [[bader2018gradual]]
+* [[reynolds2002separation]]
+* [[reynolds2002separation]]
+* [[burdy2005overview]]
+* [[fahndrich2010embedded]]
+* [[nguyen2008runtime]]
+* [[wise2019gradual]] 
+* [[mangal2020observational]]
+* [[figueroa2018towards]]

@@ -1,0 +1,21 @@
+bibtex-author: Furnas, George W. and Landauer, Thomas K. and Gomez, Louis M. and Dumais, Susan T.
+bibtex-entry-type: article
+bibtex-journal: Communications of the ACM
+bibtex-number: 11
+bibtex-pages: 964--971
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: The vocabulary problem in human-system communication
+bibtex-volume: 30
+bibtex-year: 1987
+created: 20200808231225101
+creator: Jack
+document: https://drive.google.com/file/d/1fw6EYQ8BEvEBPnJCE8-J0fZtchgFmfSF/view?usp=sharing
+modified: 20200809004402527
+modifier: Jack
+title: furnas1987vocabulary
+tmap.id: c660845f-6354-4a75-a308-e301b2ec42df
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+A synopsis on the vocabulary problem in HCI. Could be useful in the future for [[ProgramSearch]] but otherwise is a little bit outside of direct consequence.

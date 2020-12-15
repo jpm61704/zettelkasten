@@ -1,0 +1,28 @@
+created: 20200309164110180
+creator: Jack
+modified: 20201015231710641
+modifier: Jack
+tags: 
+title: Zettelkasten
+tmap.id: e70b2ea9-a44f-4a2c-9db7-f71fcaa9b3e7
+type: text/vnd.tiddlywiki
+
+{{ZettelkastenMantra}}
+
+$$
+\circ\circ\circ
+$$
+
+* [[TheToolbox]]
+* [[TheNetwork]]
+* [[WritingPrompts]]
+* [[AnalysisResearch]]
+* [[PropertyBasedSynthesisExample]]
+* [[DirectionOfConstraint]]
+* [[xrandr]]
+
+! [[Meta|<META>]]
+
+{{<META>}}
+! Orphans
+<<list-links "[all[orphans]]">>

@@ -1,0 +1,23 @@
+bibtex-author: Delahaye, David
+bibtex-booktitle: International Workshop on Types for Proofs and Programs
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 131--147
+bibtex-title: Information retrieval in a Coq proof library using type isomorphisms
+bibtex-year: 1999
+created: 20200810165831453
+creator: Jack
+document: https://drive.google.com/file/d/1Es8reuRyvSQ-ZIiaAvKbQF58QxD9NIZe/view?usp=sharing
+modified: 20200810171249945
+modifier: Jack
+title: delahaye1999information
+tmap.id: 38db1d0e-bdc4-4c8b-ba38-df4b787f2701
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Tool'': [[SearchIsos]]
+
+Formulates a search procedure for Coq using type isomorphisms. Related to the work of Ritrri and De Cosmo. 
+
+Contains a set of equivalences for dependent types. 

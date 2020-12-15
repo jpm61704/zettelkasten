@@ -1,0 +1,13 @@
+created: 20200413012440690
+modified: 20200804223821511
+title: PrincipleOfCompositionality
+tmap.id: d6891f12-bf64-4e8a-bc0b-af5506bbbdde
+type: text/vnd.tiddlywiki
+
+<<<
+''Principle of Compositionality'' The meaning of a complex expression is determined by the meanings of its parts, together with a meaning contribution from the form.
+<<<
+
+This seems something that functional programmers may take for granted because it is so foundational to how we think about code. Algebraic Datatypes seem almost a natural conclusion from this statement, even though they came around long after Frege came up with this principle. 
+
+In [["Treatise on Intuitionistic Type Theory"|"TreatiseOnIntuitionisticTypeTheory"]], the author remarks that complex expressions will have complex meanings but simple expressions may or may not have simple meanings. Very simple expressions could also encode very complicated meanings and ideas. This fact would lend some insight into why [[Synthesis]] tends to be such a difficult problem. The base constructions that are allowed in synthesis could have very complicated mappings into other domains. This seems somewhat related to the ideas in [[InformationAndTypes]].

@@ -1,0 +1,18 @@
+created: 20200322215934725
+modified: 20200804223824577
+tags: <META>To-Process
+title: WhyDependentTypeTheory
+tmap.id: 77fcfe42-40c1-4896-b900-112a9882c490
+type: text/vnd.tiddlywiki
+
+Taken from a chain of emails in the [agda] mailing list.
+
+<<<
+First of all there is a difference between “type theory” and “Type Theory”.
+
+ 
+
+The former refers to the theory of types as used in programming while the latter refers to type theory within the tradition started by Per Martin-Loef, incorporating among others concepts dependent types, universes, inductive types, etc. Now it is correct to say that using capital letters cannot hide the fact that there is more than one instance of Type Theory because it is an evolving concept. However, the same applies to set theory, there are many variants of it and in a discussion you may have to state to which one you refer.
+
+- Thorsten Altenkirch
+<<<

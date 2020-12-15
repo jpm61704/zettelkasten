@@ -1,0 +1,29 @@
+created: 20200714021409447
+modified: 20200804223817904
+title: CostModelsInSynthesis
+tmap.id: 6f90da5c-ce8f-4e4b-9923-28645fcf6e7e
+type: text/vnd.tiddlywiki
+
+First encountered in [[feser2015synthesizing]]. Cost Models of expressions in an abstract syntax can be used to place a bias on simpler programs. This has the added benefit of being able to give a procedure for enumerating terms by their cost if the rules are given as relations. 
+
+! Example
+
+Given the grammar and costs:
+
+$$
+\begin{array}{ll}
+\begin{array}{rllr}
+\text{Expr } e &:= &n&\\
+&\mid & e_1 + e_2 
+\end{array}
+&
+\begin{array}{ll}
+[\![ n ]\!] &= 1\\
+[\![ e_1 + e_2 ]\!] &= [\![ e_1 ]\!] + [\![ e_2 ]\!]
+\end{array}
+\end{array}
+$$
+
+Here $$[\![ e ]\!]$$ is a function that gives us the cost of an expression. We have to assume that $$n$$ is some finite collection of constants otherwise the cost function doesn't make much sense. But this example should get the point across.
+
+To generate low-cost program I believe we can run the cost function backwards to retrieve a set of programs with a given cost, provided that the cost function is monotonically increasing. I am not sure about this though and should investigate further(''RQ'').

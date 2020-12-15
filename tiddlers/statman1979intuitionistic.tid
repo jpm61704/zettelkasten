@@ -1,0 +1,23 @@
+bibtex-author: Statman, Richard
+bibtex-entry-type: article
+bibtex-journal: Theoretical Computer Science
+bibtex-number: 1
+bibtex-pages: 67--72
+bibtex-publisher: Elsevier
+bibtex-title: Intuitionistic propositional logic is polynomial-space complete
+bibtex-volume: 9
+bibtex-year: 1979
+created: 20200810165100712
+creator: Jack
+document: https://drive.google.com/file/d/1WxpIY86SQNqF6aXCvdxvejQ5CBEBB-sH/view?usp=sharing
+modified: 20200810165621110
+modifier: Jack
+title: statman1979intuitionistic
+tmap.id: 831f8b21-7112-4962-89b4-413de23cc21d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Collections'': [[theoretical|TheoreticalResultsInSynthesis]], [[intuitionistic logic|IntuitionisticLogicReferences]]
+
+A theoretical result of the complexity of determining the truth of a proposition in intuitionistic logic. Could be useful as a reference in the future, but no direct baring on the problems I'm thinking about.

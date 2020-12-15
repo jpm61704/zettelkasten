@@ -1,0 +1,29 @@
+created: 20200511140725961
+modified: 20200804223822949
+tags: <META>To-Process
+title: SIGPLANWritingResources
+tmap.id: ebf2388e-8ade-4c5a-9031-930567e2d8fd
+type: text/vnd.tiddlywiki
+
+<h2 id="writing">Writing</h2>
+
+<p>If you would like some advice on how to write submissions, here are
+some suggestions by</p>
+
+<ul>
+  <li>Derek Dreyer:
+<a href="https://www.youtube.com/watch?v=L_6xoMjFr70">How to Write Papers So People Can Read Them</a></li>
+  <li>Simon Peyton Jones:
+<a href="http://research.microsoft.com/~simonpj/papers/giving-a-talk/giving-a-talk.htm">How to write a good research paper, give a good research talk, and write a good grant proposal</a></li>
+  <li>Donald E. Knuth, Tracy Larrabee and Paul M. Roberts:
+<a href="http://tex.loria.fr/typographie/mathwriting.pdf">Mathematical Writing</a></li>
+  <li>Mary-Claire van Leunen and Richard Lipton:
+<a href="/Resources/Advice/VanLeunen-Lipton">How to Have Your Abstract Rejected</a></li>
+  <li>William Pugh:
+<a href="/Resources/Advice/Pugh">Advice to Authors of Extended Abstracts</a></li>
+  <li>Mark Wegman:
+<a href="http://doi.acm.org/10.1145/14947.14955">What it’s like to be a POPL referee; or how to write an extended abstract so that it is more likely to be accepted</a></li>
+  <li>P. R. Halmos:
+<a href="http://www.stat.rice.edu/~riedi/Halmos.html">How to Write Mathematics</a></li>
+  <li>Joel E. Cohen:
+<a href="/Resources/Advice/Cohen">To A Young Scientist</a>

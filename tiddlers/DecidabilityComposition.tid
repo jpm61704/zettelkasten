@@ -1,0 +1,27 @@
+created: 20201013152908289
+creator: Jack
+modified: 20201013154738141
+modifier: Jack
+tags: 
+title: DecidabilityComposition
+tmap.id: 55bb905d-3b07-4760-bf93-ae7b631900c3
+type: text/vnd.tiddlywiki
+
+Decision procedures - the inhabitants of type `Dec` - are compositional in some cases. Specifically for the unit, empty, product, and disjoint sum types.
+
+$$
+\text{top} : \text{Dec } \top\\
+\text{bot} : \text{Dec } \bot\\
+\text{and} : (\text{Dec } A) \times (\text{Dec } B) \rightarrow \text{Dec } (A \times B)\\
+\text{or} : (\text{Dec } A) \times (\text{Dec } B) \rightarrow \text{Dec } (A + B)
+$$ 
+
+However, we cannot derive the same thing for implication, i.e. map. So this does not form a functor.
+
+$$
+\text{fmap} : \text{Dec } A \rightarrow (A \rightarrow B) \cancel{\rightarrow}\ \text{Dec } B
+$$
+
+This is due to the fact that if $$A$$ is decided to be false, then there is no assertion made on $$B$$. It can be either true or false intuitionistically. Another way to look at it is that in the event of a false $$A$$, there is no witness of $$A$$ to provide to the function to get a $$B$$. There is also not a refutation of $$B$$ from this because $$B$$ may be proved by other means.
+
+The proofs for these can be achieved fairly easily using a theorem prover, but make the definition of decision procedures extremely straightforward.

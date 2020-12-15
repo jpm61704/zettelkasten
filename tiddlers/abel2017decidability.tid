@@ -1,0 +1,19 @@
+bibtex-author: Andreas Abel, Joakim Öhman and Andrea Vezzosi
+bibtex-entry-type: article
+bibtex-journal: Proceedings of the ACM on Programming Languages
+bibtex-number: POPL
+bibtex-pages: 1--29
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: Decidability of Conversion for Type Theory in Type Theory
+bibtex-volume: 2
+bibtex-year: 2017
+created: 20200422071222377
+document: https://drive.google.com/file/d/1y31lthj9SaMbbIgLvTYzmcAtapO5eD2x/view?usp=sharing
+modified: 20200804223816830
+title: abel2017decidability
+tmap.id: 432b3e7b-214c-4f4f-b22c-0d381c668202
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+See [[FavoringExplicitOrImplicitProofs]]

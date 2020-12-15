@@ -1,0 +1,23 @@
+bibtex-author: Thummalapenta, Suresh and Xie, Tao
+bibtex-booktitle: Proceedings of the twenty-second IEEE/ACM international conference on Automated software engineering
+bibtex-entry-type: inproceedings
+bibtex-pages: 204--213
+bibtex-title: Parseweb: a programmer assistant for reusing open source code on the web
+bibtex-year: 2007
+collections: [[CodeReuseReferences]] [[ProgramSearchReferences]]
+created: 20200813214345034
+creator: Jack
+document: https://drive.google.com/file/d/1MhtdJAiKfCVhqjSkGwxcGAZhpbUR-A2M/view?usp=sharing
+modified: 20200813215959290
+modifier: Jack
+title: thummalapenta2007parseweb
+tmap.id: 6b9112a8-3d6e-4866-bbcd-a81126dcae2d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* ''Tool'' : ParseWeb
+* Claims improvements over [[mandelin2005jungloid]], [[sahavechaphan2006xsnippet]], and [[holmes2005using]]
+* Takes input/output types as specification
+* Interacts with Google Source Code Search to get code and does static analysis on results.
+* The interaction with a source code search engine makes this very different from other similar tools due to the large amount of code available for analysis.

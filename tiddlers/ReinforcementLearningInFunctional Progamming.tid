@@ -1,0 +1,22 @@
+created: 20200310170300000
+modified: 20200804223822382
+tags: Project
+title: ReinforcementLearningInFunctional Progamming
+tmap.id: 1420873e-a918-44bd-9223-572c7452d822
+type: text/vnd.tiddlywiki
+
+Target: OOPSLA main deadline on April 15th
+
+! Contributions
+
+* Reinforcement Learning for Functional Program Synthesis
+* Type-Guided as opposed to scalar driven RL
+* Recursive Programs
+** this brings forward an application for recursive MDPs
+* Implementation in Haskell
+
+There are two dimensions to our contributions for this paper: the PL contributions and the RL contributions. In the PL contribution we have a new method for program synthesis. In Reinforcement Learning we have a new way of encoding RL problems in Haskell along with an application of recursive MDPs.
+
+! Useful Notes
+
+* [[FunctionalReinforcementLearning]]

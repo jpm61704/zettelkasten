@@ -1,0 +1,23 @@
+bibtex-author: Holmes, Reid and Murphy, Gail C
+bibtex-booktitle: Proceedings of the 27th international conference on Software engineering
+bibtex-entry-type: inproceedings
+bibtex-pages: 117--125
+bibtex-title: Using structural context to recommend source code examples
+bibtex-year: 2005
+collections: [[ProgramSearchReferences]]
+created: 20200811222609942
+creator: Jack
+document: https://drive.google.com/file/d/1mNZOOVsmT9GfNxuTuZ7fBHLbRALSv7Qq/view?usp=sharing
+modified: 20200813203033524
+modifier: Jack
+title: holmes2005using
+tmap.id: 3dec910e-810f-41a4-8e91-f2feac559544
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* ''Tool'': [[Strathcona]]
+
+They develop a tool for finding appropriate examples for users of a framework. The problem is that often, with large example repositories, that the user doesn't necessarily know which example will yield the information they need. 
+
+This tool seems to aim mostly at an OO-paradigm and mine code to "suggest" a solution to a user that they then implement themselves. It is not auto-completion in the style of [[gvero2013complete]]. It is interesting though in the frame of [[ProgramSearch]].

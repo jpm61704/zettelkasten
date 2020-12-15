@@ -1,0 +1,36 @@
+created: 20201013113309040
+creator: Jack
+modified: 20201013224527443
+modifier: Jack
+tags: 
+title: ChangingProofs
+tmap.id: 260fc364-187a-4ce6-b770-66f3552e1320
+type: text/vnd.tiddlywiki
+
+What happens to a proof when the structure it works on changes slightly? Here is an example:
+
+[img[BSTProof.png]]
+
+This is a proof that a binary tree exhibits the search property necessary for it to be a BST. Now let's focus on the root element and pretend that we are going to change it. This means that any proof term that depends on the root element $$10$$ must be recomputed. Highlighted in red:
+
+[img[Dependents.png]]
+
+These proofs are all of those that require the term we are going to replace $$10$$ with. Let this be $$n$$:
+
+$$
+\begin{array}{rl}
+- \infty \leq n & n \leq \infty\\
+6 \leq n & n \leq 13\\
+& n \leq 12
+\end{array}
+$$
+
+If we provide an $$n$$, the idea is that we can reconstruct the BST proof from the parts of the proof we already have, saving a bunch of time from needing to recompute the entire tree.
+
+
+<<<
+In the One-Hole Context view of things, indices are candidates for differentiation now too! But only the indices.
+<<<
+
+
+[[What do these changes look like on the inference rules defining BST?|ChangingBST]]

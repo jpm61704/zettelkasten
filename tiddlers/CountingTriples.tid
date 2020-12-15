@@ -1,0 +1,12 @@
+created: 20200329225316199
+modified: 20200804223818047
+tags: BluesGuitarDrills
+title: CountingTriples
+tmap.id: 046a08df-d08f-47ce-ad2e-c5a13116e5b4
+type: text/vnd.tiddlywiki
+
+I found this method of counting triplets a bit easier than the method in the book:
+
+$$
+\textbf{A}\ \&\ 2\ \&\ 3\ \&\ \textbf{B}\ \&\ 2\ \&\ 3\ \&\ \textbf{C}\ \&\ 2\ \&\ 3\ \&\ \textbf{D}\ \&\ 2\ \&\ 3\ \&\ 
+$$

@@ -1,0 +1,32 @@
+created: 20200514143357158
+modified: 20200804223820442
+title: LocalVsGlobalTermsInDependentUniverses
+tmap.id: e2e3ccf9-818d-4d68-b841-5c73512224e3
+type: text/vnd.tiddlywiki
+
+When working on a dependent universe on [[TypeSearchForAgda]], the issue was hit that the definition of modules I am using doesn't work for unapplied variables. The definition of modules I am using supports typecodes and terms that typecheck to those typecodes.
+
+```
+data Module where
+ [] : Module
+ _,⟨_,_∶_⟩ : (Γ : Module)
+           → (A : Term)
+           → (⊢A : Γ ⊢ A )
+           → interp ⊢A        -- this argument is a problem
+           → Module
+```
+
+The marked argument is problematic because a variable supplied by a $\Pi$-type will need to be typechecked against but it may not have a term that has been provided as an argument yet. This introduces the need to have a local context for typechecking terms that do not yet have definitions, only type declarations. I can imagine a few ways of doing this.
+
+# Having a separate context datatype for these variables
+# including them in the Module datatype as a separate argument or have the entries to Module be their own type
+
+Both of these approaches have pros and cons it would seem. Right now I am leaning towards a separate context because local variables seem to be a separate thing from top-level declarations in a module.
+
+--- 
+
+After further investigation, the hangup here just has to do with providing a lambda-bound variable to the interpretation function. The way I have dealt with this now is to literally bind a function in the formation rule for Pi-Types. The rule looks something like this:
+
+$$
+\frac{\Gamma \vdash A \quad [[ A ]] \rightarrow \Gamma , A \vdash B}{\Gamma \vdash \Pi\ A\ B}
+$$

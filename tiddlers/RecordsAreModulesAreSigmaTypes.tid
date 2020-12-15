@@ -1,0 +1,8 @@
+created: 20200402002755128
+modified: 20200804223822027
+tags: 
+title: RecordsAreModulesAreSigmaTypes
+tmap.id: d917bb17-453e-4388-9b92-9b9a86636ac9
+type: text/vnd.tiddlywiki
+
+Recall that records, modules, and sigma-types are all more/less the same from a type-theoretic point of view. The only differences between them exist at the implementation level. 

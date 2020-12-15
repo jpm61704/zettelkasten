@@ -1,0 +1,10 @@
+created: 20200813195117894
+creator: Jack
+modified: 20200813202746444
+modifier: Jack
+tags: Template
+title: CollectionLinkTemplate
+tmap.id: e5bd5b41-1965-40d4-8988-1e3e92dc0429
+type: text/vnd.tiddlywiki
+
+<li> <$link to={{!!title}}>{{!!shortname}} </$link> </li>

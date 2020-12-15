@@ -1,0 +1,8 @@
+created: 20200313231339697
+modified: 20200804223820872
+tags: <META>ResearchQuestion
+title: MonadicStates
+tmap.id: 27376bf5-b2b1-4652-b627-2b116d6ae83f
+type: text/vnd.tiddlywiki
+
+Should there be a monad wrapping the output of a possible-state function in FRL? See [[MonadicFRL]]

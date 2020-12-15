@@ -1,0 +1,9 @@
+created: 20201011010317803
+creator: Jack
+modified: 20201011011527161
+modifier: Jack
+title: InterpretationOfAssertionsInDivva
+tmap.id: a7d3db71-5ba4-4f97-abe9-61e9dbea3be4
+type: text/vnd.tiddlywiki
+
+For the purposes of static analysis, we interpret an $$\text{assert}$$ as a request to prove that some fact holds in a sub-heap at a program point, or more abstractly, that some fact holds over a data structure. Consider some property $$\hat a \cdot p$$, where $$a$$ is some pointer to the heap and $$p$$ is some property over the heap, defined in separation logic. Here we wish to verify that $$p$$ holds on the heap pointed to by $$\hat a$$ by unfolding the inductive structure(shape) of $$p$$ on $$\hat a$$.

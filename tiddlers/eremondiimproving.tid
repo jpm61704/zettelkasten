@@ -1,0 +1,46 @@
+bibtex-author: Eremondi, Joseph and Swierstra, Wouter and Hage, Jurriaan
+bibtex-entry-type: article
+bibtex-journal: TyDe
+bibtex-number: TyDe
+bibtex-title: Improving Error Messages for Dependent Types
+bibtex-year: 2018
+created: 20200511135946415
+document: https://drive.google.com/open?id=1K-tyE3tG6Jiq3kwf1ZNGYw9tun4YaF_Q
+modified: 20200804223818546
+title: eremondiimproving
+tmap.id: 49ba71f4-a2c6-4055-b255-21e97c39ae9a
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+''Analyzing as an example of an extended abstract. Not reading for technical reasons''
+
+* This paper doesn't go into really any detail about techniques other than saying they have them, an example of why it is useful, and when it would be used
+* It quickly says why past work in System F isn't enough and gives related work and how it furthers that work
+* Most of the paper is setup, only one section gives the actual result
+
+!!! Sections
+
+# Introduction
+# Error Message Goals and Concepts ''(Setup w/ Example)''
+## Error Location and Cause ''(Problem 1)''
+## Left to Right Bias ''(Problem 2)''
+# Higher Order Unification ''(Theoretical Setup)''
+# Dependent Type Error Strategies ''(Solution)''
+## Replay Graphs  ''(Method 1)''
+## Counter-Factual Unification ''(Method 2)''
+# Results ''(Implementation)''
+
+This gives the rough format for the abstract being:
+
+# Introduction
+# Problem Setup and Example
+## Subproblem 1
+## Subproblem 2
+## etc.
+# Theoretical Setup
+# Solution
+## Method 1
+## Method 2
+## etc.
+# Implementation

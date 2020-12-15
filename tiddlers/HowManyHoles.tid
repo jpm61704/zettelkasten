@@ -1,0 +1,10 @@
+created: 20200313021657262
+modified: 20200804223819935
+tags: <META>ResearchQuestion
+title: HowManyHoles
+tmap.id: 8025e133-5e0a-4335-8189-cf6061c83a6a
+type: text/vnd.tiddlywiki
+
+Another follow-up from this [[compound-search synthesis|CompundSearchSynthesis]]: Most programs are rather small compositions of known library functions. Given this, can we find efficient search procedures for each size of problem? Could a solution to a two-hole problem give a basis for the solution to a three-hole problem?
+
+relelated to [[WhichHoleFirst]]

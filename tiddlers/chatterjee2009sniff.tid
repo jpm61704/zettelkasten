@@ -1,0 +1,22 @@
+bibtex-author: Chatterjee, Shaunak and Juvekar, Sudeep and Sen, Koushik
+bibtex-booktitle: International Conference on Fundamental Approaches to Software Engineering
+bibtex-entry-type: inproceedings
+bibtex-organization: Springer
+bibtex-pages: 385--400
+bibtex-title: Sniff: A search engine for java using free-form queries
+bibtex-year: 2009
+collections: [[CodeReuseReferences]] [[ProgramSearchReferences]]
+created: 20200813220119863
+creator: Jack
+document: https://drive.google.com/file/d/1hKnKqWa0h2zd0-anNI7Izz3nr8hc8fVV/view?usp=sharing
+modified: 20200813221737905
+modifier: Jack
+title: chatterjee2009sniff
+tmap.id: a69d33ad-d49e-469a-9fa7-e14c2087821f
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Aims to maintain english-level semantics while performing source code search
+* Claims [[mandelin2005jungloid]] and [[thummalapenta2007parseweb]] are insufficient when the user doesn't know the types of the code they want to find.
+* Takes in plain english text as a specification. This sets it apart in several ways from other work. Notably they use javadoc to accomplish this. This effectively makes this type + comment based search.

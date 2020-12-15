@@ -1,0 +1,17 @@
+created: 20200828214557584
+creator: Jack
+modified: 20200828215522841
+modifier: Jack
+title: HowIGotToHere
+tmap.id: ba30bfea-188f-4e90-9b5a-33552077282f
+type: text/vnd.tiddlywiki
+
+Examples have long been a preferred specification for program synthesis. In the beginning, examples were used to verify programs after their synthesis, to ensure that it behaved in a manner expected by the user. More recently, at PLDI 2015, two groups(''Add Citation'') published work that pushed forward the state-of-the-art in type-driven program synthesis in the presence of examples. 
+
+Instead of using the examples for post hoc verification of synthesized programs, these two groups used the examples //during// the synthesis process. As soon as program exhibited an incorrect behavior according to the examples, the synthesizer could throw out the bad program(or group of programs if the program had several holes) and proceed along a more promising route. 
+
+While this seems like a small step forward, it is the first set of papers to essentially tackle a problem that looks identical to what most undergraduates face when learning functional programming. It is very common for an instructor to pose practice problems along with a type declaration and a few examples as a test for the students. This is the same input that is provided to these synthesizers. 
+
+The question that arose for me, after reading this work, was: why do we stop at examples? Why can't we perform this kind of propagation for other sorts of properties over programs? A good start would be to figure out how to support algebraic properties. Later, we can explore synthesis of more complicated structures. But one thing was clear, the mechanism that will best support this exploration is the use of dependent types.
+
+''continue'': why dependent types are the right fix

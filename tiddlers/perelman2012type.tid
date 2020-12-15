@@ -1,0 +1,32 @@
+bibtex-author: Perelman, Daniel and Gulwani, Sumit and Ball, Thomas and Grossman, Dan
+bibtex-booktitle: Proceedings of the 33rd ACM SIGPLAN conference on Programming Language Design and Implementation
+bibtex-entry-type: inproceedings
+bibtex-pages: 275--286
+bibtex-title: Type-directed completion of partial expressions
+bibtex-year: 2012
+created: 20200803164544086
+creator: Jack
+document: https://drive.google.com/file/d/1qNIRT88brEEuslQS1RB7ajrxnEgyoch2/view?usp=sharing
+modified: 20200806162633565
+modifier: Jack
+title: perelman2012type
+tmap.id: aa025aa1-a12d-4c6b-9983-01de4702d26d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Similar to [[Insynth]] and [[Prospector]] 
+
+Uses the subtyping system of OOP to prefer more specific programs over less specific ones. Solutions of type ``RealySpecificSubclass`` will be preferred to ``Object``. This seems a natural strength of subtyping in a synthesis framework. More exploration of this idea is needed. 
+
+Because OO-Synthesis is essentially synthesis of stateful record types, can synthesis techniques of programs in this paradigm be used in a functional setting to synthesize record and dependent sum types?
+
+!!! Two Types of Hole
+
+The authors make a distinction between holes that should be filled in the current "run" of the synthesis procedure and those that may be deferred to another time. They use $$?$$ to denote holes to be filled on this problem, and $$\diamond$$ to denote those that will be ignored.
+
+This distinction seemed useful because sometimes you have arguments that don't make a difference in the synthesis process one way or another. Thee should obviously be left alone by the synthesis procedure because filling them would yield an over-fit to the problem, which will also enlarge the space of possible solutions. 
+
+!!! Ranking solutions
+
+They use a fairly standard ranking function to give a hierarchy to the candidate solutions. They use type-closeness(because of subtyping), size, weights, and more to determine which programs should be presented first as solutions.

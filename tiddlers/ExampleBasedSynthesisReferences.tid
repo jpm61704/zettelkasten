@@ -1,0 +1,21 @@
+created: 20200810171846348
+creator: Jack
+modified: 20200818161740535
+modifier: Jack
+shortname: example-based synthesis
+tags: TheNetworkCollections
+title: ExampleBasedSynthesisReferences
+tmap.id: 4bdd633c-53d4-4b28-bdd8-a7bd541cec79
+type: text/vnd.tiddlywiki
+
+# [[albarghouthi2013recursive]] 
+# [[feser2015synthesizing]]
+# [[osera2015type]]
+
+There are primarily two ways that examples are used in synthesis. The first, and more primitive, is to check candidate programs after they have been synthesized. The other is by propagating the examples over the solutions as they are synthesized, which lets the examples inform the direction the synthesizer takes before any complete programs are found. 
+
+[[[1]|albarghouthi2013recursive]], [[[2]|feser2015synthesizing]], and [[[3]|osera2015type]] all use the latter method to various degrees. In [[[1]|albarghouthi2013recursive]], they enumerate all possible programs by size, resulting in a sort of bottom-up synthesis. The examples are fed into these candidates and then used to guide the conditional branching of the programs. It therefore is a bit of a hybrid between the older style of enumerate-and-check with propagation over conditions.
+
+The propagation-based methods really shine in a top-down approach, where an AST is synthesized from the root node as opposed to one of the leaves (as in [[[1]|albarghouthi2013recursive]]). This is the strategy that both [[[2]|feser2015synthesizing]] and [[[3]|osera2015type]] take. In the Feser paper[[[2]|feser2015synthesizing]], each of the higher-order combinators are given a set of deductive rules for propagating examples over the combinator. For instance, it will ensure that the size of the input and output list of a `map` application are the same size. If they are not, then the synthesizer knows to backtrack. The rules for each combinator are specialized over the functional properties of that combinator and this can be tailored a bit to new additions. This method isn't necessarily syntactic, but more of a component-based strategy in which the solutions are derived from applications of terms in the environment. 
+
+In Osera's work[[[3]|osera2015type]], the examples are propagated directly over the syntactic structures of the language. It is very similar to [[[2]|feser2015synthesizing]] but instead focuses on the language type-system's introduction and elimination forms. It is a bit more close to the language level, but because of that scale becomes a bigger problem than in [[[2]|feser2015synthesizing]]. It would be interesting to take a look at both of these papers and see if Feser's deduction rules are derivable from Osera's(''RQ'').

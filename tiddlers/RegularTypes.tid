@@ -1,0 +1,24 @@
+created: 20200919000225275
+creator: Jack
+modified: 20200919002428105
+modifier: Jack
+tags: 
+title: RegularTypes
+tmap.id: d7133996-6a86-4065-a0ec-f006fc6c30d2
+type: text/vnd.tiddlywiki
+
+The regular types, as described(to my very rough understanding) in [[mcbride2001derivative]], are the algebraic datatypes that are subject to differentiation. These are encoded in a typical algebraic style for this purpose.
+
+Here are a few examples of this encoding:
+
+$$
+\begin{array}{rlll}
+\textbf{Bool} &= \textbf{true} \mid \textbf{false} & \mapsto & 1 + 1 = 2 \\
+\textbf{Nat} &= \textbf{Z} \mid \textbf{S Nat} & \mapsto & \mu x. 1 + (1 \times x)  \\
+\textbf{List } A &= \empty \mid x :: xs & \mapsto & \mu x. 1 + (A \times x) \\
+\textbf{BTree } A &= \textbf{Leaf} 
+\\& \mid \textbf{Node } (\textbf{BTree } A) A (\textbf{BTree } A) & \mapsto & \mu x. 1 + (A \times x^2)
+\end{array}
+$$
+
+The forms on the right are all differentiable into a context as described in [[mcbride2001derivative]].

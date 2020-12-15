@@ -1,0 +1,18 @@
+bibtex-author: WISE, JENNA and JOHANNES, BADER and ALDRICH, JONATHAN and TANTER, {\'E}RIC and SUNSHINE, JOSHUA
+bibtex-entry-type: article
+bibtex-title: Gradual Verification of Recursive Heap Data Structures
+created: 20200902032655607
+creator: Jack
+document: https://drive.google.com/file/d/1-SITc9RjvSkIcip_aEU86xD3X-2yWqlL/view?usp=sharing
+modified: 20200909141654475
+modifier: Jack
+tags: [[<META> ToRead]]
+title: wise2019gradual
+tmap.id: 70fc2909-c206-4fbc-b58b-9496f73b6de3
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+The difference between what [[tsai2015synthesizing]] and this line of gradual reasoning is in the goals of the verification. The goal of  [[GradualVerification]] is to ease the burden of the programmer by allowing for under-specific contracts to be placed in a program, and then verified dynamically when it's static constraints cannot be met.
+
+With [[tsai2015synthesizing]], we instead come to a point when static verification of some property fails, and then //push// the dynamic checking into the program parts that correspond to the areas of the static check that could not be satisfied. This combines both static and dynamic checking to give a safe-execution of a program with minimal run-time cost. The goal here, unlike [[wise2019gradual]] isn't to ease the annotation burden though, it is to complete a verification where it otherwise wouldn't be possible.

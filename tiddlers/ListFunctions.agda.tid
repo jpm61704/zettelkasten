@@ -1,0 +1,18 @@
+created: 20201120163854683
+creator: Jack
+modified: 20201120164032764
+modifier: Jack
+tags: <CODE>Agda
+title: ListFunctions.agda
+tmap.id: 6b531fad-12da-4b71-89c3-5587c1e06e12
+type: text/vnd.tiddlywiki
+
+```
+∣_∣ : ∀ {A} → List A → ℕ
+∣ [] ∣     = zero
+∣ x ∷ xs ∣ = suc ∣ xs ∣
+
+replicateL : ∀ {A} → ℕ → A → List A
+replicateL zero x = []
+replicateL (suc n) x = x ∷ (replicateL n x)
+```

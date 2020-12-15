@@ -1,0 +1,21 @@
+created: 20201120163108360
+creator: Jack
+modified: 20201120163131096
+modifier: Jack
+tags: <CODE>Agda
+title: LengthReplicate.agda
+tmap.id: 117f8120-e989-4d32-9a16-62872f471cc8
+type: text/vnd.tiddlywiki
+
+```
+length : ∀ {A} (xs : List A) → Σ[ n ∈ ℕ ] (Length xs n)
+length []       =  zero , len0
+length (x ∷ xs) = let lₓₛ = length xs
+                  in suc (proj₁ lₓₛ) , lenS (proj₂ lₓₛ)
+
+replicate : ∀ {A : Set} (n : ℕ) → (x : A) 
+          → Σ[ xs ∈ List A ] Length xs n
+replicate zero x    = [] ,  len0
+replicate (suc n) x = let xsₙ = replicate n x
+                      in (x ∷ proj₁ xsₙ) , lenS (proj₂ xsₙ)
+```

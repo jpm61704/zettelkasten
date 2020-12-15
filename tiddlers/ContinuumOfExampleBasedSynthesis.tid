@@ -1,0 +1,15 @@
+created: 20200818164158951
+creator: Jack
+modified: 20200818213528738
+modifier: Jack
+title: ContinuumOfExampleBasedSynthesis
+tmap.id: 4f8fbf15-635f-423f-a5bb-8025a956094a
+type: text/vnd.tiddlywiki
+
+Also see [[ExampleBasedSynthesisReferences]].
+
+[img[ExampleContinuum.png]]
+
+Methods for example-based synthesis typically embrace varying levels of integration with the examples as a specification. 
+
+''Idea'': Synthesize-and-check are examples applied to big-step rules and propagation of examples is applied to small-step rules.

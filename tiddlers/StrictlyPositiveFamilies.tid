@@ -1,0 +1,9 @@
+created: 20201011002852676
+creator: Jack
+modified: 20201011005136167
+modifier: Jack
+title: StrictlyPositiveFamilies
+tmap.id: ca45a442-e5c7-4679-93f4-46f7401463db
+type: text/vnd.tiddlywiki
+
+The dependently typed analog of [[StrictlyPositiveTypes]]. See [[morris2007constructing]].

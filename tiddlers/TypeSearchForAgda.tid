@@ -1,0 +1,28 @@
+created: 20200324023830085
+modified: 20200804223824158
+tags: Implementation ProgramSearch
+title: TypeSearchForAgda
+tmap.id: 0b791afb-fb1d-4767-b283-31e0e6caa20a
+type: text/vnd.tiddlywiki
+
+! Initial Limits
+
+* Only handle Base Types, Product Types, and Function Types along with Examples
+* Provide this as an external tool, not a solver within Agda
+
+! Next Steps
+
+* ~~Create a small library to do practice searches over. Include Arithmetic and Booleans for sure~~
+* Create a universe for dependent types in agda. See [[note on first class modules|ModulesInProgramSearch]].
+
+! Implementation Notes
+
+* [[There are some limits to Agda's reflection system|AgdaReflectionForTypeSearch]]
+* [[There needs to be some notion of locally bound and globally bound variables|LocalVsGlobalTermsInDependentUniverses]]
+
+
+! For FoPL Deadline
+
+# Emacs Integration
+# Index Lookup for queries - a table of the (absolute?) indices
+# 

@@ -1,0 +1,34 @@
+bibtex-author: Keshav, Srinivasan
+bibtex-entry-type: article
+bibtex-journal: ACM SIGCOMM Computer Communication Review
+bibtex-number: 3
+bibtex-pages: 83--84
+bibtex-publisher: ACM New York, NY, USA
+bibtex-title: How to read a paper
+bibtex-volume: 37
+bibtex-year: 2007
+created: 20200811215244654
+creator: Jack
+document: https://drive.google.com/file/d/1BV-6BHRZycntkhzjb7ZqU45BEObTGzSH/view?usp=sharing
+modified: 20200811221426001
+modifier: Jack
+title: keshav2007read
+tmap.id: 729afbfe-023d-4da1-a40b-043152c221c4
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+!! My Process
+
+!!! 1st Pass
+
+* Read the following sections
+** Abstract & Introduction
+** Related Works
+** Conclusion
+** Figures, Formulas, etc.
+* Add an entry in the Zettelkasten
+** Include a link to my copy in GDrive
+** Put the paper into context by linking it to a few collections. Be sure to back-reference them from the collection tiddler as well.
+** Add the paper to [[TheNetwork]]
+* Gather new references

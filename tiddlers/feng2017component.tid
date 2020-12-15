@@ -1,0 +1,37 @@
+bibtex-author: Feng, Yu and Martins, Ruben and Wang, Yuepeng and Dillig, Isil and Reps, Thomas W
+bibtex-booktitle: Proceedings of the 44th ACM SIGPLAN Symposium on Principles of Programming Languages
+bibtex-entry-type: inproceedings
+bibtex-journal: PoPL
+bibtex-number: POPL
+bibtex-pages: 599--612
+bibtex-title: Component-based synthesis for complex APIs
+bibtex-year: 2017
+created: 20200730190535705
+document: https://drive.google.com/file/d/14WGeegPynZ63a-n0BImMfcFIcXf1-K_G/view?usp=sharing
+modified: 20200804223819226
+title: feng2017component
+tmap.id: 3b87e275-3460-4a79-9f3f-5e4da0f267f4
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+* Precursor to [[guo2019program]]
+* Successor to [[mandelin2005jungloid]]
+
+!!! Summary 
+
+This work uses petri nets to synthesize programs in spaces with many possible component calls(function calls). It does no syntactic synthesis in the traditional sense but instead looks for programs that can be written using only function calls.
+
+The specification is given as a type signature to target, thus making this a kind of [[TypeDrivenSynthesis]]. The other specification is in the form of examples which are used as //post hoc// verification. 
+
+!!! Two-Step Approach
+
+The authors make the distinction that this method must take place in two steps. First, a sketch is generated that is type-correct. Second, the available variables are filled into the sketch and tested against the examples until a solution is found. This strikes me as one of the inherent weaknesses of the system and is alleviated by [[osera2015type]] and [[feser2015synthesizing]].
+
+The unique part of this work is that they are able to deal with large component libraries. This is where the previously mentioned works fall a bit short. 
+
+!!! Synthesis as Graph Reachability
+
+This paper, and its predecessor, make the observation that we can think of synthesis as a complex graph reachability problem. [[guo2019program]] later expands on this to work over polymorphic types.
+
+''RQ'' Is there a nice way of expanding this to dependent types?

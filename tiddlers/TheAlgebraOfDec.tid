@@ -1,0 +1,17 @@
+created: 20201009000526107
+creator: Jack
+modified: 20201009003336203
+modifier: Jack
+tags: 
+title: TheAlgebraOfDec
+tmap.id: b0328833-dad6-42d3-bf5d-3e696e77c249
+type: text/vnd.tiddlywiki
+
+The `Dec` predicate behaves algebraically in some cases. 
+
+```
+and : ∀ {A B : Set} → Dec A → Dec B → Dec (A × B)
+or  :  ∀ {A B : Set} → Dec A → Dec B → Dec (A ⊎ B)
+true  : Dec Unit
+false : Dec Empty
+```

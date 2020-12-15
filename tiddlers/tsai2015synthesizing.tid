@@ -1,0 +1,23 @@
+bibtex-author: Tsai, Yi-Fan and Coughlin, Devin and Chang, Bor-Yuh Evan and Rival, Xavier
+bibtex-entry-type: article
+bibtex-journal: arXiv preprint arXiv:1511.04846
+bibtex-title: Synthesizing Short-Circuiting Validation of Data Structure Invariants
+bibtex-year: 2015
+created: 20200809004031805
+creator: Jack
+document: https://drive.google.com/file/d/1bx1BE0SCsbHEUdBf-doQQeT2hY0EDC9A/view?usp=sharing
+modified: 20201011010311679
+modifier: Jack
+title: tsai2015synthesizing
+tmap.id: 822aae39-0716-4f4b-9bdf-805338d9ff6d
+type: text/vnd.tiddlywiki
+
+{{||RefTemplate}}
+
+Goal: Provide a mixed static-dynamic analyzer for data-shape properties on data structures. Data properties would have something to do with the properties of the data being held in a given node(such as sorting) and the shape property would have to do with the form of the data with regard to the pointers(cyclicy, order of linkage, etc). 
+
+I get the idea that there is a gradual typing interpretation to this work. The paper assumes no typing but it also seems like the analysis for properties of this sort could then be used to //add// types to a data structure that didn't already have them. 
+
+! Details
+* [[Two Steps|TwoStepsOfSynthesisInDivva]]
+* [[InterpretationOfAssertionsInDivva]]
