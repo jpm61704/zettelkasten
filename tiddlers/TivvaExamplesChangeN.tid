@@ -1,0 +1,112 @@
+created: 20201217153940117
+modified: 20201217171224836
+tags: <META>Unfinished
+title: TivvaExamplesChangeN
+type: text/vnd.tiddlywiki
+
+```
+module vec-explanation where
+
+open import Data.Nat
+open import Data.Fin using (Fin ; zero; suc)
+open import Data.Product
+```
+
+{{AgdaVec}}
+
+{{AgdaVecSorted}}
+```
+change-n : ∀ {n} → Fin n → ℕ → Vec (suc n) → Vec (suc n)
+change-n zero x' (x ∷ v) = x' ∷ v
+change-n (suc i) x' (x ∷ v) = x ∷ change-n i x' v
+```
+
+The definitions above comprise of a complete problem for Tivva reproof. In order to provide a reproof function we need to define the subproofs lemma. It is allowed to take in the proof we wish to alter along with all arguments to `change-n`.
+
+```
+subproofs : ∀ {n} {xs : Vec (suc n)} 
+          → (i : Fin n) 
+          → ℕ 
+          → Sorted xs → Set
+```
+
+We only need to handle the case for `∷-sorted` as the singleton list is ruled out by the type of `change-n`. Thus we will analyze the clauses of change-n and see how they effect the proof of sortedness. `change-n` recurs over `i`, the index for the changed variable. This gives us two cases two consider.
+
+!! I.) `i = zero`
+
+When `i = zero` acts upon a term of `Sorted (x ∷ y ∷ xs)` we get the following chain:
+
+$$
+\begin{array}{c}
+(x :: y :: xs)\\
+\mid\\
+\texttt{change-n zero n} \\
+\downarrow\\
+(n :: y :: xs)
+\end{array}
+$$
+
+So for this application we change all `x` to `n` in the proof forms. This produces the rule:
+
+$$
+\frac{{\color{red}n \leq y} \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (n :: y :: xs) } (\text{::-sorted})
+$$
+
+Which says we must prove $$\color{red} n \leq y$$ in order to preserve our `Sorted` proof after applying `change-n zero n`. This produces the clause:
+
+```
+subproofs zero x' (∷-sorted {y = y} _ _) = x' ≤  y
+```
+
+!! II.) `i = suc n`
+
+Now, following the same process for the second clause.
+
+$$
+\begin{array}{c}
+(x :: y :: xs)\\
+\mid\\
+\texttt{change-n (suc i) n} \\
+\downarrow\\
+(x :: \texttt{change-n i n (y :: xs)})
+\end{array}
+$$
+
+Which acts on `::-sorted` to get:
+
+$$
+\frac{x \leq y \quad \textbf{Sorted } (y :: xs)}
+{\textbf{Sorted } (x :: \texttt{change-n i n } (y :: xs)) } (\text{::-sorted})
+$$
+
+This no longer matches the form of the original rule. So we split on $$i$$ again to arrive at two forms that //do// match proof rules.
+
+!!! A.) `i = (suc zero)`
+
+$$
+\begin{array}{c}
+(x :: y :: xs)\\
+\mid\\
+\texttt{change-n (suc zero) n} \\
+\downarrow\\
+(x :: \texttt{change-n zero n (y :: xs)})\\
+\downarrow\\
+(x :: n :: xs)
+\end{array}
+$$
+
+When subbed into the `::-sorted` rule we have:
+
+$$
+\frac{{\color{red} x \leq n} \quad {\color{red} \textbf{Sorted } (n :: xs)}}{\textbf{Sorted } (x :: n :: xs) } (\text{::-sorted})
+$$
+
+So we must calculate $$x \leq n$$ and $$\textbf{Sorted } (n :: xs)$$ for a change in $$n$$. The second can be looked at as $$\partial_x \textbf{Sorted} (x :: xs)$$. This is one of the common forms when looking at transforms on a list that is sorted. 
+
+After a few unrollings, and applications of the above [[partial derivatives|PartialDerivativesInTivva]] we arrive at the clause:
+
+```
+subproofs zero x' (∷-sorted {y = y} _ _) = x' ≤  y
+```
+
+!!! B.) `i = (suc (suc n))`

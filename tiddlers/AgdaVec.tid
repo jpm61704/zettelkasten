@@ -1,0 +1,19 @@
+created: 20201217154055040
+modified: 20201217154116587
+tags: <CODE>Agda
+title: AgdaVec
+type: text/vnd.tiddlywiki
+
+```
+infixr 5 _∷_
+
+data Vec : ℕ → Set where
+  [] : Vec 0
+  _∷_ : ∀ {n}
+      → ℕ
+      → Vec n
+      → Vec (suc n)
+
+[_] : ℕ → Vec 1
+[ x ] = x ∷ []
+```

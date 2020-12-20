@@ -1,0 +1,17 @@
+created: 20201217152933067
+modified: 20201217180956286
+tags: 
+title: ListSorted
+type: text/vnd.tiddlywiki
+
+$$
+\frac{ }{\textbf{Sorted } [] } (\text{[]-sorted})
+$$
+
+$$
+\frac{ }{\textbf{Sorted } [ x ] } (\text{[x]-sorted})\\
+$$
+
+$$
+\frac{x \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } (\text{::-sorted})
+$$

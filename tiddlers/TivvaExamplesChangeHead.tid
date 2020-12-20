@@ -1,0 +1,111 @@
+created: 20201217141055627
+modified: 20201217153848970
+title: TivvaExamplesChangeHead
+type: text/vnd.tiddlywiki
+
+```
+module lists-explanation where
+
+open import Data.Nat
+open import Data.Product
+open import Data.Unit using (⊤ ; tt)
+open import Relation.Nullary
+
+infixr 5 _∷_
+
+data List : Set where
+  [] : List
+  _∷_ : ℕ → List → List
+
+[_] : ℕ → List
+[ x ] = x ∷ []
+
+data Sorted : List → Set where
+  []-sorted : Sorted []
+  [x]-sorted : ∀ {x} → Sorted [ x ]
+  ∷-sorted : ∀ {x y xs}
+           → x ≤ y
+           → Sorted (y ∷ xs)
+           → Sorted (x ∷ (y ∷ xs))
+
+change-head : ℕ → List → List
+change-head n [] = []
+change-head n (x ∷ xs) =  n ∷ xs
+```
+
+Above is the input for a divva problem. In order for a proof of sorted to be
+recalculated after a `change-head` has been applied to a list we will need to
+calculate the subproofs which do not hold after `change-head`. This function will
+have access to all arguments given to `change-head`.
+
+```
+subproofs : ∀ {xs} → ℕ → Sorted xs → Set
+
+reprove : ∀ {xs n}
+        → (sorted-xs : Sorted xs)
+        → (subproofs n sorted-xs
+        → Sorted (change-head n xs))
+```
+
+
+Subproofs can be written by analyzing the effect of change-head on some list l
+such that (Sorted l) holds. We will take a look at each constructor:
+
+```
+          []-sorted : Sorted []
+                             ↓
+                             l
+```
+
+For this first constructor, `change-head l ≡ change-head [] ≡ []`
+
+So, we must prove `Sorted []`. By looking through the constructors for the proof,
+we can see that this is done with `[]-sorted`. This tells us that no subproofs
+need recalculation in order to prove that change-head produced a sorted list.
+This is represented using the unit type `⊤`.
+
+```
+subproofs n []-sorted =  ⊤
+```
+
+The singleton case follows in like manner from the previous case.
+
+```
+subproofs n [x]-sorted = ⊤
+```
+
+The cons case is the most interesting of the three. Taking a look at the
+constructor:
+
+$$
+\frac{x \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } (\text{::-sorted})
+$$
+
+Apply `change-head n` to `(x ∷ (y ∷ xs))` gives:
+
+$$
+\frac{{\color{red}n \leq y} \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (n :: y :: xs) } (\text{::-sorted})
+$$
+
+Now, any term in `∷-sorted` that contains `n` will need to be recalculated. In this
+example this is `n ≤ y`.
+
+```
+subproofs n (∷-sorted {y = y} _ _) =  n ≤ y
+```
+
+From here, reprove can be re-written mechanically by subbing in the new terms
+into the changed positions.
+
+```
+reprove []-sorted rps =  []-sorted
+reprove [x]-sorted rps =  [x]-sorted
+reprove (∷-sorted _ ps) n≤y =  ∷-sorted n≤y ps
+```
+
+This constitutes the completed problem. This was a fairly basic change of a
+single point, so more complicated examples will need to be considered,
+especially those which use functions containing recursion.
+
+
+

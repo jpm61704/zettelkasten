@@ -1,0 +1,141 @@
+created: 20201217170848260
+modified: 20201219235120109
+tags: <META>Unfinished <META>ResearchQuestion
+title: PartialDerivativesInTivva
+type: text/vnd.tiddlywiki
+
+The common "deltas" will be on the datatypes primary constructors and the forms of those constructors in the inference rules for the property. Here those will be:
+
+$$
+\begin{array}{ll}
+\partial_x\ \textbf{Sorted } (x :: xs)& \text{from } \_::\_ \\
+\partial_{xs}\ \textbf{Sorted } (x :: xs) & \text{from } \_::\_\\
+\partial_x\ \textbf{Sorted } [ x ] & \text{from } [x]\text{-sorted}\\
+\partial_x\ \textbf{Sorted } (x :: y :: xs) & \text{from } ::\text{-sorted}\\
+\partial_y\ \textbf{Sorted } (x :: y :: xs) & \text{from } ::\text{-sorted}\\
+\partial_z\ \textbf{Sorted } (x :: y :: xs) & \text{from } ::\text{-sorted}\\
+\end{array}
+$$
+
+This is just a momentary observation that will, without a doubt, need to be changed/altered later into something more formal. Particularly, I'm not convinced that the "common forms" will always be the constructors and forms in the inference rules. There may be more or less. This seems like a good start though.
+
+Calculating fixpoints of these $$\partial$$s will, undoubtedly, be a major part of any process i arrive at. 
+
+''RQ'' How do we calculate these partial derivatives? Which partials should we compute?
+
+This comes from the idea that we would like to know the sub-terms within some proof-term $$P(a)$$ when we have a transform act on $a$: $$P(T(a))$$. We assume we may express $$T(a)$$ as a set of partial derivatives on the proof structure $$P$$.
+
+So, we calculate $$\partial_a P(a)$$. When writing this function we will want to write cases for various forms of $$a$$. These will be the possible forms that occur in the consequent of each of the proof rules. For a predicate on lists, I might begin:
+
+$$
+\partial_{xs}\ \textbf{Sorted } xs
+$$
+
+Which may be expressed as several other partial differentials. If $$xs \equiv []$$ then $$\partial_{[]} [] = \top$$. Same for $$\partial_{[x]}[x]$$. However, $$\partial_{(x::y::xs)} \textbf{Sorted } (x :: y :: xs)$$ can be split into several possible changes. We assume we are only changing a single point in the data structure, so:
+
+$$
+\partial_x\ \textbf{Sorted } (x :: y :: xs) \\
+\lor 
+\partial_y\ \textbf{Sorted } (x :: y :: xs)\\
+\lor 
+\partial_{xs}\ \textbf{Sorted } (x :: y :: xs)
+$$
+
+We can then calculate each of these on their own.
+
+!!! First Disjunct
+
+$$
+\partial_x\ \textbf{Sorted } (x :: y :: xs)  
+$$
+
+For this case we have a single constructor for $$\textbf{Sorted}$$ to work over. 
+
+$$
+\begin{array}{c}
+\partial_x \left( \frac{x \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+\partial_{\color{red} x} \left( \frac{{\color{red} x} \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+x \leq y
+\end{array}
+$$
+
+!!! Second Disjunct
+
+$$
+\partial_y\ \textbf{Sorted } (x :: y :: xs)  
+$$
+
+For this case we have a single constructor for $$\textbf{Sorted}$$ to work over. 
+
+$$
+\begin{array}{c}
+\partial_y \left( \frac{x \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+\partial_{\color{red} y} \left( \frac{x \leq {\color{red} y} \quad \textbf{Sorted } ({\color{red}y} :: xs)}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+x \leq y \times \partial_y\ \textbf{Sorted } (y :: xs)
+\end{array}
+$$
+
+!!! Third Disjunct
+
+$$
+\partial_{xs}\ \textbf{Sorted } (x :: y :: xs)  
+$$
+
+For this case we have a single constructor for $$\textbf{Sorted}$$ to work over. 
+
+$$
+\begin{array}{c}
+\partial_{xs} \left( \frac{x \leq y \quad \textbf{Sorted } (y :: xs)}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+\partial_{\color{red} xs} \left( \frac{x \leq y \quad \textbf{Sorted } (y :: {\color{red}xs})}{\textbf{Sorted } (x :: y :: xs) } \right)\\
+\Downarrow\\
+\partial_{xs}\ \textbf{Sorted } (y :: xs)
+\end{array}
+$$
+
+!! Bringing it together
+
+$$
+\begin{array}{lcl}
+\partial_{[]} \textbf{Sorted } [] &=& \top\\
+\partial_x \textbf{Sorted } (x :: [] ) &=& \top\\
+\partial_x\ \textbf{Sorted } (x :: y :: xs) &=& x \leq y \\
+\partial_y\ \textbf{Sorted } (x :: y :: xs) &=& x \leq y \land \partial_y\ \textbf{Sorted } (y :: xs)\\ 
+\partial_{xs}\ \textbf{Sorted } (x :: y :: xs) &=& \partial_{xs}\ \textbf{Sorted } (y :: xs)\\
+\end{array}
+$$
+
+Now we want to calculate both partials for $$\textbf{Sorted } (x :: xs)$$, as this is the case we are left with.
+
+$$
+\begin{array}{lcl}
+\partial_x \textbf{Sorted } (x :: xs) &=& \texttt{case } xs \texttt{ of}\\
+&\mid& [] \rightarrow  \partial_x \textbf{ Sorted } [ x ]\\
+&\mid& (y :: ys) \rightarrow \partial_x \textbf{ Sorted } (x :: y :: ys) \\
+\partial_{xs} \textbf{Sorted } (x :: xs) &=&
+\texttt{case } xs \texttt{ of}\\
+&\mid& [] \rightarrow  \partial_{[]} \textbf{ Sorted } [ x ]\\
+&\mid& (y :: ys) \rightarrow \partial_{y :: ys} \textbf{ Sorted } (x :: y :: ys) \\
+\end{array}
+$$
+
+$$
+\begin{array}{lcl}
+\partial_x \textbf{Sorted } [x] &=& \top \\
+\partial_x \textbf{Sorted } (x :: y :: xs) &=&\partial_x \textbf{ Sorted } (x :: y :: xs) \\
+\partial_{xs} \textbf{Sorted } (x :: xs) &=&
+\texttt{case } xs \texttt{ of}\\
+&\mid& [] \rightarrow  \partial_{[]} \textbf{ Sorted } [ x ]\\
+&\mid& (y :: ys) \rightarrow \partial_{y :: ys} \textbf{ Sorted } (x :: y :: ys) \\
+\end{array}
+$$
+
+$$
+\circ\circ\circ
+$$
+
+This is all quite a large mess at this point. I think I will revisit this from 1. a lens perspective and 2. starting from more basic types such as products and working out those transformations.
