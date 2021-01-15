@@ -1,0 +1,54 @@
+created: 20210106012648556
+modified: 20210107231311401
+title: TivvaExamplesSumsChangeIfSix
+type: text/vnd.tiddlywiki
+
+Starting from the algebraic encoding of `Composite` given in [[TivvaExamplesSums]]
+
+```
+Composite n = (n ≡ 4) ∨ (n ≡ 6) ∨ (n ≣ 9)
+```
+
+let's work the [[Tivva]] process on the `changeIfSix` function.
+
+```
+changeIfSix : ℕ → ℕ → ℕ
+changeIfSix n' 6 = n'
+changeIfSix n' n = n
+```
+
+We want to consider what happens to a proof of `Composite n` if `n` is altered by this function. Can we re-use any information? Or must we recompute everything?
+
+let's take a look at each clause in `changeIfSix` and consider them separately.
+
+1. For `changeIfSix n' 6`, We would have a proof of `Composite 6`. This means that our proof is:
+
+```
+right (left refl)
+```
+
+In this situation we wish to reconstruct the same right-left parts(i.e. the same inductive constructor) but not necessarily the inner proofs(Here `refl`). `refl` here has to be thrown out because we need to show (n' ≡ 6) and have `refl : n ≡ 6`. Thus we add `n' ≡ 6` as an output to `subproofs`
+
+* Using the algebraic constructors for `Composite`:<br /> `subproofs n' (right (left prf)) = n' ≡ 6`
+* Or, in the form of the inductive constructors: <br /> `subproofs n' six-is-comp = n' ≡ 6`
+
+
+2. For `changeIfSix n' n`, We would have a proof of `Composite n` where `n != 6`. In these cases we will have `changeIfSix n' n = n`. This is the identity case and can quit out early and just use the unit type. This case needs no information to maintain our proof.
+
+This gives us the final version of subproofs:
+
+```
+subproofs n' six-is-comp = n' ≡ 6
+subproofs n' _ = ⊤
+
+```
+
+And we can easily construct the reprove function:
+
+```
+reprove n' four-is-comp _ = four-is-comp
+reprove n' six-is-comp refl = six-is-comp
+reprove n' nine-is-comp _ = nine-is-comp
+```
+
+The takeaway here is in how to handle the presence of predicates that contain disjunction and how that interacts with choosy transformations. 

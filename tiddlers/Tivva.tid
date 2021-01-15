@@ -1,0 +1,19 @@
+created: 20201224200233612
+modified: 20210115042248160
+tags: <META>Unfinished
+title: Tivva
+type: text/vnd.tiddlywiki
+
+* [[Input to Tivva|TivvaInputs]]
+* [[Examples|TivvaExamples]]
+* [[Reprovables|Reprovable]]
+* Encoding Predicates
+** [[TivvaAlgebraicEncodings]]
+* Partial Derivatives
+** [[Definition of Partial Derivitives|DefiningPartialDerivatives]]
+** [[Partial Derivitives|PartialDerivativesInTivva]]
+** [[PartialsInTivva]]
+** [[PartialDerivativesForPredicates]]
+* [[LengthAndReplicate]]
+* [[TivvaProtoAlgorithm]]
+* [[TransformationsAsLenses]]

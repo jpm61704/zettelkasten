@@ -1,0 +1,18 @@
+created: 20210115040529883
+modified: 20210115040536877
+title: TivvaAlgebraicEncodings
+type: text/vnd.tiddlywiki
+
+For our purposes, algebraic types are defined by the grammar:
+
+$$
+\begin{array}{rll}
+\textbf{ADT } A :=& 1 & \text{Unit Type}\\
+\mid& 0 & \text{Empty Type}\\
+\mid& \tau & \text{Base Type Reference}\\
+\mid& F(i_1,i_2,...)& \text{Type Family Application}\\
+\mid& A_1 \times A_2 & \text{Product Types}\\
+\mid& A_1 + A_2 & \text{Sum Types}\\
+\mid& \mu\ T.  A & \text{Fixpoints}
+\end{array}
+$$

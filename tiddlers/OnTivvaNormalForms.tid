@@ -1,0 +1,28 @@
+created: 20210106011759898
+modified: 20210106012337527
+title: OnTivvaNormalForms
+type: text/vnd.tiddlywiki
+
+To get inductively defined families into an algebraic form, we make a few conversions of the original constructors. First, we ensure that the families are always of the form:
+
+$$
+\frac{a \equiv c\quad ...}{P\ a}
+$$
+
+as opposed to,
+
+$$
+\frac{...}{P\ c}
+$$
+
+This means that a collection of inference rules can be combined into a single rule in many cases:
+
+$$
+\begin{array}{c}
+\frac{ }{\textsf{Composite }4}\\
+\frac{ }{\textsf{Composite }6}\\
+\frac{ }{\textsf{Composite }9}
+\end{array}
+\Rightarrow
+\frac{n \equiv 4\ \lor n \equiv 6\ \lor n \equiv 9}{\textsf{Composite } n}
+$$

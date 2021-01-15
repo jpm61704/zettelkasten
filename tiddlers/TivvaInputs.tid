@@ -1,0 +1,16 @@
+created: 20210115042257251
+modified: 20210115043152512
+title: TivvaInputs
+type: text/vnd.tiddlywiki
+
+[img[TivvaBlackbox.png]]
+
+As input, the [[Tivva]] algorithm takes
+
+* An algebraic datatype $$A$$
+* A Predicate on $$A$$, called $$P$$. This predicate will be converted to an [[algebraic encoding|TivvaAlgebraicEncodings]] internally.
+* A Transform on $$A$$, called $$T$$. This will likely need some sort of restriction(such as being a [[lens|TransformationsAsLenses]] for instance).
+
+The [[Tivva]] algorithm will then produce an instance of [[Reprovable]]. [[Reprovable]] contains the necessary functions for taking a proof of $$P$$ and updating the proof when the scrutinee is affected by $$T$$.
+
+For more on the process itself, see [[TivvaProtoAlgorithm]].

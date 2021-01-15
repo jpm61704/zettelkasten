@@ -1,0 +1,24 @@
+created: 20210115034547580
+modified: 20210115040604683
+title: PartialDerivativesForPredicates
+type: text/vnd.tiddlywiki
+
+For [[Tivva]] we can take a partial derivative of a predicate using the following process:
+
+For an algebraically encoded predicate of type
+
+ $$I_1 \rightarrow I_2 \rightarrow ... \rightarrow \textbf{Set}$$ 
+
+and form 
+
+$$ P\ i_1\ i_2\ ... = A_{i_1,i_2,...}$$
+
+where $$A_{i_1,i_2,...}$$ is an [[algebraic type|TivvaAlgebraicEncodings]] that may refer to dependent terms $$i_1,i_2...$$. 
+
+We may take the partial derivative with respect to any index $$i_n$$, called $$\partial_{i_n}$$, by the following function:
+
+$$
+\textbf{TODO}
+$$
+
+//Idea is to add any call to F which contains the variable in question to our list of proofs needing to be reproven.//

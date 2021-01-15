@@ -1,0 +1,18 @@
+created: 20210106201210604
+modified: 20210106201953196
+title: TivvaADTDoubts1
+type: text/vnd.tiddlywiki
+
+The example in [[TivvaExamplesSumsChangeIfSix]] shows off the problem well. First consider the Sigma-type version:
+
+```
+Composite = Σ[ n ∈ ℕ ] (n ≡ 4) ∨ (n ≡ 6) ∨ (n ≣ 9)
+```
+
+and the action of `changeIfSix n'` on an instance of this type. We are not able to do anything with an instance of this type because we cannot match on `n`. `changeIfSix n'` takes a different action depending on the value of `n`. A proper type family works better here.
+
+```
+Composite n = (n ≡ 4) ∨ (n ≡ 6) ∨ (n ≣ 9)
+```
+
+We can match on n to determine which proof we actually are dealing with.

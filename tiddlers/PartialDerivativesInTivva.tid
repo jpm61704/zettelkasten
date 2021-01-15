@@ -1,6 +1,6 @@
 created: 20201217170848260
-modified: 20201219235120109
-tags: <META>Unfinished <META>ResearchQuestion
+modified: 20210108013518298
+tags: <META>ResearchQuestion
 title: PartialDerivativesInTivva
 type: text/vnd.tiddlywiki
 
@@ -139,3 +139,6 @@ $$
 $$
 
 This is all quite a large mess at this point. I think I will revisit this from 1. a lens perspective and 2. starting from more basic types such as products and working out those transformations.
+
+* Related
+** [[PartialsInTivva]]

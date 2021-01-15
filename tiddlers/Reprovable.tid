@@ -1,0 +1,26 @@
+created: 20201224200323359
+modified: 20201224200800591
+title: Reprovable
+type: text/vnd.tiddlywiki
+
+These are the triples of types, predicates, and transformations that present a partial preservation of proofs of the predicate when acted on by the transformation.
+
+These are exhibited in the [[tivva examples|TivvaExamples]]. 
+
+Defined as a record type, this takes the form:
+
+
+```
+record Reprovable {A : Set} {B : Set} 
+                  (P : A → Set) (T : B → A → A) : Set₁ where
+  field
+    subproofs : ∀ {a : A} → B → P a → Set
+    reprove : ∀ {a : A} → (b : B)
+            → (pₐ : P a) → subproofs b pₐ
+            → P (T b a)
+```
+
+Where `subproofs` is the difficult part to define, but this should be fairly mechanical given an algebraic type and first order predicate. Reprove can be viewed in two ways:
+
+# As a function that gives the new proof of `P` given some supporting information
+# As a lemma that says subproofs calculates the information in `P a` that must be reproven to get `P (T a)`.

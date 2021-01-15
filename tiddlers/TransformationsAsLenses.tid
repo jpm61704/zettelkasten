@@ -1,0 +1,8 @@
+created: 20210111235555670
+modified: 20210112003636450
+title: TransformationsAsLenses
+type: text/vnd.tiddlywiki
+
+''Idea'': After some early reading, it seems like the vague "transformations" that we work on in [[Tivva]] could be specified as [[Lenses]].
+
+Could the process be taken in Tivva actually //be// a special case of a lens? Lenses over dependent types may just be Tivva. 

@@ -1,0 +1,27 @@
+created: 20210106013559074
+modified: 20210106201315823
+tags: <META>Unfinished
+title: TivvaSomeDoubtsOnAlgebraicEncodings
+type: text/vnd.tiddlywiki
+
+<<<
+Should we encode the type indices as sum types? This may have been an error.
+<<<
+
+The way I am currently encoding predicates algebraically is as sum types. This pushes the entire predicate into the type `Set`. Where it originally would be in type `A -> Set`. Is this a problem in some way? The way this interacts in Tivva isn't quite how I would like it. Basically, it comes down to encoding an algebraic predicate as:
+
+```
+P : Set 
+P = Σ[ a ∈ A ] C a
+```
+
+vs 
+
+```
+P : A → Set
+P = C
+```
+
+''Question'': Which of these forms is the right way moving forward?
+
+[[Example 1|TivvaADTDoubts1]]

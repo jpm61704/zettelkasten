@@ -1,0 +1,44 @@
+created: 20210104182226388
+modified: 20210106012451343
+title: TivvaExamplesSums
+type: text/vnd.tiddlywiki
+
+For this example, consider the predicate describing the natural numbers which are digits //and// composite numbers(non-prime). 
+
+```
+data Composite : ℕ → Set where
+  four-is-comp : Composite 4
+  six-is-comp : Composite 6
+  nine-is-comp : Composite 9
+```
+
+This example is meant to study how to encode and work with sum types in the Tivva setting.
+
+To encode this algebraically:
+
+1. Represent all indices as dependent products
+
+```
+Composite = Σ[ n ∈ ℕ ] ???
+```
+
+2. For each constructor of type `Composite m`, let `n ≡ m` be one of the premises to be proven (See [[OnTivvaNormalForms]]).
+
+```
+            Composite 4       Composite 6      Composite 9
+                 ↓                 ↓                ↓
+   Premises    n ≡ 4             n ≡ 6            n ≡ 9
+```
+
+3. For a sum type such as `Composite`, introduce a disjunct for each constructor containing its premises.
+
+```
+Composite = Σ[ n ∈ ℕ ] (n ≡ 4) ∨ (n ≡ 6) ∨ (n ≣ 9)
+```
+
+This is the algebraic encoding of `Composite` we will use going forward.
+
+Now we can take a look at two different transformations on numbers, and how they change `Composite`.
+
+# [[TivvaExamplesSumsChangeNat]]
+# [[TivvaExamplesSumsChangeIfSix]]

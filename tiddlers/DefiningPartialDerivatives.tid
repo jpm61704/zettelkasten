@@ -1,0 +1,12 @@
+created: 20210115040716960
+modified: 20210115040911318
+tags: 
+title: DefiningPartialDerivatives
+type: text/vnd.tiddlywiki
+
+The working definition for a ''partial derivative'' in [[Tivva]] is:
+
+
+<<<
+The subterms in a predicate's proof that must be reproven/updated in the event that the predicate's scrutinee is transformed in some determined way.
+<<<

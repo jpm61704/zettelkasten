@@ -1,0 +1,22 @@
+created: 20210108013005115
+modified: 20210108013439986
+tags: 
+title: PartialsInTivva
+type: text/vnd.tiddlywiki
+
+The notion of partial derivatives in Tivva is an interesting one. For a predicate:
+
+$$
+\textbf{BST}_{[n,m]}t
+$$
+
+We would need to introduce partial derivatives for each of the type indices:
+
+$$
+\partial_n \quad \partial_m\quad\partial_t
+$$
+
+The interesting thing about Tivva, is that it seems to be doing some extra reasoning about the $$\partial_t$$ terms. Instead of considering if $$t$$ becomes $$t'$$ in some unknown way, we say that $$t' \equiv T(t)$$. It is from this that we are able to reason so heavily about proof preservation.
+
+* Related
+** [[PartialDerivativesInTivva]]

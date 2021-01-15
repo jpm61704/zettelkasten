@@ -1,0 +1,55 @@
+created: 20201224170624418
+modified: 20201225234834866
+title: TivaExamplesProducts
+type: text/vnd.tiddlywiki
+
+For the product type as it is usually defined, consider a function:
+
+```
+change-fst : ℕ → (ℕ × ℕ) → (ℕ × ℕ)
+change-fst fst' (_ , snd) =  fst' , snd
+```
+
+and a predicate:
+
+```
+data Sorted : (ℕ × ℕ) → Set where
+  sorted : ∀ {n m}
+         → n ≤ m
+         → Sorted (n , m)
+```
+
+We can define the `subproofs` and `reprove` functions as:
+
+
+```
+subproofs : ∀ {p}
+          → ℕ
+          → Sorted p
+          → Set
+subproofs n' (sorted {_} {m} _) =  n' ≤ m
+
+reprove : ∀ {p n}
+        → (sp : Sorted p)
+        → subproofs n sp
+        → Sorted (change-fst n p)
+reprove (sorted _) n'≤m = sorted n'≤m
+```
+
+These fit the structure of a [[reprovable|Reprovable]], so we can wrap it all up in an instance of `Reprovable`. 
+
+```
+reprovable : Reprovable Sorted change-fst
+reprovable =  record 
+    { subproofs =  λ { n' (sorted {_} {m} _) → n' ≤ m }
+    ; reprove   =  λ { _ (sorted _) n'≤m → sorted n'≤m } }
+```
+
+$$
+\circ\circ\circ
+$$
+
+This is a bit of a degenerate example, but it shows how the `subproof` function "reaches in" and grabs the inner proof term from `sorted`. This is the essence of what [[Tivva]] should do. 
+
+This example also highlights a situation where a nearly minimal amount of information is given. All we know are the types for the functions, the restriction of the products to the natural numbers, and the structure/constructors for `Sorted`. If the example we give is overly polymorphic or general with respect to the predicate we wish to reprove, [[things don't work so well|TivvaOverlyPolymorphicExample]].
+

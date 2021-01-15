@@ -1,0 +1,18 @@
+created: 20210106012509638
+modified: 20210106013441742
+tags: <META>Unfinished
+title: TivvaExamplesSumsChangeNat
+type: text/vnd.tiddlywiki
+
+Starting from the algebraic encoding of `Composite` given in [[TivvaExamplesSums]]
+
+```
+Composite = Σ[ n ∈ ℕ ] (n ≡ 4) ∨ (n ≡ 6) ∨ (n ≣ 9)
+```
+
+Let's work the [[Tivva]] process on the `changeNat` function.
+
+```
+changeNat : ℕ → ℕ → ℕ
+changeNat n' n = n'
+```

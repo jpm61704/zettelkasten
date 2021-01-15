@@ -1,0 +1,13 @@
+created: 20201225234838066
+modified: 20201225235638811
+title: TivvaOverlyPolymorphicExample
+type: text/vnd.tiddlywiki
+
+Following a similar setup as [[Tivva on products|TivaExamplesProducts]], let's consider the polymorphic version of `change-fst`:
+
+```
+change-fst : ∀ {A B : Set} → A → (A × B) → (A × B)
+change-fst fst' (_ , snd) =  fst' , snd
+```
+
+If we assume we have some predicate `P : (A × B) → Set`, we run into a problem. With just this information it is not possible to "break into" `P` and pull out the sub-predicates that need to be proven when `change-fst` is applied. We //must// assume something about the structure of `P`. The goal of Tivva is to be able to generate `subproofs` and `reprove` for some subset of possible `P`, hopefully those that are defined as ASTs with $$\Sigma$$-types.
