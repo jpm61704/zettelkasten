@@ -1,19 +1,29 @@
 created: 20201224200233612
-modified: 20210115042248160
+modified: 20210128224747415
 tags: <META>Unfinished
 title: Tivva
 type: text/vnd.tiddlywiki
 
-* [[Input to Tivva|TivvaInputs]]
+* Problem Description
+** [[Input to Tivva|TivvaInputs]]
+** [[Paper Contributions|TivvaTechnicalContributions]] and [[an explainer|TivvaTechnicalContributionsExplained]] for why I think these are justified
+** [[The Ping|ThePingOfTivva]]
+* [[Related Works|TivvaRelatedWorks]]
+* Definitions
+** [[Reprovables|Reprovable]]
+** [[Partial Derivitives|DefiningPartialDerivatives]]
+* Formalism
+** [[Grammar of Predicates|TivvaAlgebraicEncodings]]
+** [[Taking Partial Derivatives(unfinished)|PartialDerivativesForPredicates]]
+** [[Partial Derivatives w.r.t. unrestricted transformations|TivvaProtoAlgorithm]]
+** [[Analysis of Transformations|TivvaFunctionalAnalysis]]
 * [[Examples|TivvaExamples]]
-* [[Reprovables|Reprovable]]
-* Encoding Predicates
-** [[TivvaAlgebraicEncodings]]
-* Partial Derivatives
-** [[Definition of Partial Derivitives|DefiningPartialDerivatives]]
-** [[Partial Derivitives|PartialDerivativesInTivva]]
-** [[PartialsInTivva]]
-** [[PartialDerivativesForPredicates]]
-* [[LengthAndReplicate]]
-* [[TivvaProtoAlgorithm]]
-* [[TransformationsAsLenses]]
+** [[Taking a partial derivative(early example)|PartialDerivativesInTivva]]
+** [[The Motivating Example|TivvaMotivatingExample]]
+* Other
+** [[Possible Partials|PartialsInTivva]]
+
+<hr>
+
+* Tangeants and Unrelated
+** [[LengthAndReplicate]]

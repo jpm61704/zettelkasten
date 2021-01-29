@@ -1,11 +1,10 @@
 created: 20201120001520600
 creator: Jack
-modified: 20201120165316352
+modified: 20210121232140370
 modifier: Jack
-tags: <META>Unfinished
 title: LengthAndReplicate
 tmap.id: 35170b55-cf30-4bbe-b6ad-13eebae54b2e
-type:  
+type: text/vnd.tiddlywiki
 
 The relation `Length` between lists and natural numbers is an interesting case of relating two types constructors in a one-to-one manner. This sort of relation gives rise to a very interesting set of functions that are essentially induced by the definition. These functions are very common in synthesis literature as targets and this relation gives a nice explanation as to why synthesis is often tractable on this problem.
 

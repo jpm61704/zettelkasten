@@ -1,5 +1,5 @@
 created: 20210115040529883
-modified: 20210115040536877
+modified: 20210126001859613
 title: TivvaAlgebraicEncodings
 type: text/vnd.tiddlywiki
 
@@ -16,3 +16,5 @@ $$
 \mid& \mu\ T.  A & \text{Fixpoints}
 \end{array}
 $$
+
+Predicates are allowed to use the grammar above.

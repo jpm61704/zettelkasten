@@ -1,5 +1,5 @@
 created: 20201217140936300
-modified: 20210107231445175
+modified: 20210126004419065
 tags: 
 title: TivvaExamples
 type: text/vnd.tiddlywiki
@@ -14,3 +14,8 @@ type: text/vnd.tiddlywiki
 ** [[TivvaExamplesChangeHead]]
 ** [[TivvaExamplesChangeN]]
 ** [[TivvaExampleSetRoot]]
+* Tree Examples
+** [[Tree Problem Setup|TivvaTreeProblemSetup]]
+** [[setRoot|TivvaTreeSetRootExample]]
+** [[setSmallest|TivvaTreeSetSmallestExample]]
+** [[addRightmost|TivvaTreeAddRightmostExample]]

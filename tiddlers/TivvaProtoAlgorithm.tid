@@ -1,6 +1,10 @@
 created: 20210106204507796
-modified: 20210115043138178
+modified: 20210126001546241
 tags: 
 title: TivvaProtoAlgorithm
 type: text/vnd.tiddlywiki
 
+To get the sub-definitions of [[Reprovable]], we can create a clause for each clause in the transform we are considering. To generate subproofs:
+
+# If the clause makes a structural change, then add the entire proof obligation 
+# If the clause makes a change //within// the constructor, and the constructor does not change, then add the partial derivatives w.r.t. the changed term in the proof term.
